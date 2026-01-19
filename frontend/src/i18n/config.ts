@@ -5,9 +5,19 @@ import { getTranslations, getSupportedLanguages } from '../config/loader'
 const LANGUAGE_KEY = 'preferred_language'
 
 // Get stored language preference or default to 'en'
+// Validates that stored language is actually supported
 const getStoredLanguage = (): string => {
   try {
-    return localStorage.getItem(LANGUAGE_KEY) || 'en'
+    const stored = localStorage.getItem(LANGUAGE_KEY)
+    if (stored && getSupportedLanguages().includes(stored)) {
+      return stored
+    }
+    // If stored language is not supported, clear it and return default
+    if (stored) {
+      localStorage.removeItem(LANGUAGE_KEY)
+      console.warn(`Stored language '${stored}' is not in supported languages, resetting to 'en'`)
+    }
+    return 'en'
   } catch (error) {
     console.error('Error getting stored language:', error)
     return 'en'
