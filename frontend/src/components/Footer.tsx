@@ -4,9 +4,9 @@ import { getResumeData } from '../data/resume'
 import { getSiteConfig } from '../config/loader'
 
 export const Footer = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const config = getSiteConfig()
-  const resumeData = getResumeData()
+  const resumeData = getResumeData(i18n.language)
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [

@@ -5,8 +5,8 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { getResumeData } from '../data/resume'
 
 export const Experience = () => {
-  const { t } = useTranslation()
-  const resumeData = getResumeData()
+  const { t, i18n } = useTranslation()
+  const resumeData = getResumeData(i18n.language)
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0)
 
   const toggleExpand = (index: number) => {

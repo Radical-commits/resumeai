@@ -4,8 +4,8 @@ import { CheckCircle } from 'lucide-react'
 import { getResumeData } from '../data/resume'
 
 export const About = () => {
-  const { t } = useTranslation()
-  const resumeData = getResumeData()
+  const { t, i18n } = useTranslation()
+  const resumeData = getResumeData(i18n.language)
 
   return (
     <section id="about" className="section">

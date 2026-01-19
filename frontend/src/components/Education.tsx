@@ -4,8 +4,8 @@ import { GraduationCap, Award, Languages, FileText } from 'lucide-react'
 import { getResumeData } from '../data/resume'
 
 export const Education = () => {
-  const { t } = useTranslation()
-  const resumeData = getResumeData()
+  const { t, i18n } = useTranslation()
+  const resumeData = getResumeData(i18n.language)
 
   return (
     <section id="education" className="section section-alt">

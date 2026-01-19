@@ -4,8 +4,8 @@ import { Check, Circle, X } from 'lucide-react'
 import { getResumeData } from '../data/resume'
 
 export const Skills = () => {
-  const { t } = useTranslation()
-  const resumeData = getResumeData()
+  const { t, i18n } = useTranslation()
+  const resumeData = getResumeData(i18n.language)
 
   // Dynamically build skill categories from resume data
   const skillCategories: Array<{
