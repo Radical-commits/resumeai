@@ -1,10 +1,6 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import { getTranslations } from '../config/loader'
-
-// Load translations from our configuration
-const en = getTranslations('en')
-const ru = getTranslations('ru')
+import { getTranslations, getSupportedLanguages } from '../config/loader'
 
 const LANGUAGE_KEY = 'preferred_language'
 
@@ -27,13 +23,23 @@ export const storeLanguage = (language: string): void => {
   }
 }
 
+// Dynamically build resources from configured languages
+const supportedLanguages = getSupportedLanguages()
+const resources: Record<string, { translation: any }> = {}
+
+supportedLanguages.forEach(lang => {
+  try {
+    resources[lang] = { translation: getTranslations(lang) }
+  } catch (error) {
+    console.warn(`No translations found for language '${lang}', using English fallback`)
+    resources[lang] = { translation: getTranslations('en') }
+  }
+})
+
 i18n
   .use(initReactI18next)
   .init({
-    resources: {
-      en: { translation: en },
-      ru: { translation: ru }
-    },
+    resources,
     lng: getStoredLanguage(),
     fallbackLng: 'en',
     interpolation: {

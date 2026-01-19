@@ -1,12 +1,16 @@
 /**
  * Configuration Loader
  * Loads site configuration and resume data from JSON files
+ * Supports multilingual resume loading
  */
 
 import siteConfigData from '../../../config.json'
 import resumeJsonData from '../../../data/resume.json'
 import translationsData from '../../../data/translations.json'
 import type { Resume } from '../types/resume'
+
+// Cache for language-specific resumes
+const resumeCache: Record<string, Resume> = {}
 
 // Type for site configuration
 export interface SiteConfig {
@@ -67,9 +71,99 @@ export function getSiteConfig(): SiteConfig {
 
 /**
  * Convert JSON resume data to Resume type
+ * Supports loading language-specific resume files
+ * @param lang - Language code (e.g., 'en', 'ru'). If not provided, uses default resume.json
  */
-export function getResumeData(): Resume {
-  return resumeJsonData as Resume
+export function getResumeData(lang?: string): Resume {
+  // If no language specified or English, return default resume
+  if (!lang || lang === 'en') {
+    return resumeJsonData as Resume
+  }
+
+  // Check cache first
+  if (resumeCache[lang]) {
+    return resumeCache[lang]
+  }
+
+  // Try to load language-specific resume file
+  // Note: For Vite to bundle these files, they must exist at build time
+  // Users should create data/resume.{lang}.json files before building
+  try {
+    // Import all possible language resume files
+    // Vite will tree-shake unused ones during build
+    let languageResume: Resume | null = null
+
+    // Dynamically select based on language code
+    switch (lang) {
+      case 'ru':
+        try {
+          languageResume = require('../../../data/resume.ru.json') as Resume
+        } catch {
+          // File doesn't exist
+        }
+        break
+      case 'es':
+        try {
+          languageResume = require('../../../data/resume.es.json') as Resume
+        } catch {
+          // File doesn't exist
+        }
+        break
+      case 'fr':
+        try {
+          languageResume = require('../../../data/resume.fr.json') as Resume
+        } catch {
+          // File doesn't exist
+        }
+        break
+      case 'de':
+        try {
+          languageResume = require('../../../data/resume.de.json') as Resume
+        } catch {
+          // File doesn't exist
+        }
+        break
+      case 'pt':
+        try {
+          languageResume = require('../../../data/resume.pt.json') as Resume
+        } catch {
+          // File doesn't exist
+        }
+        break
+      case 'zh':
+        try {
+          languageResume = require('../../../data/resume.zh.json') as Resume
+        } catch {
+          // File doesn't exist
+        }
+        break
+      case 'ja':
+        try {
+          languageResume = require('../../../data/resume.ja.json') as Resume
+        } catch {
+          // File doesn't exist
+        }
+        break
+      case 'ko':
+        try {
+          languageResume = require('../../../data/resume.ko.json') as Resume
+        } catch {
+          // File doesn't exist
+        }
+        break
+    }
+
+    if (languageResume) {
+      resumeCache[lang] = languageResume
+      return languageResume
+    } else {
+      console.warn(`No resume file found for language '${lang}' (data/resume.${lang}.json), falling back to English`)
+      return resumeJsonData as Resume
+    }
+  } catch (error) {
+    console.warn(`Error loading resume for language '${lang}', falling back to default resume.json:`, error)
+    return resumeJsonData as Resume
+  }
 }
 
 /**

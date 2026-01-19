@@ -1,41 +1,32 @@
 /**
  * Resume Data Loader
- * Refactored to load from JSON configuration
+ * Supports multilingual resume loading from language-specific JSON files
  */
 
 import { getResumeData as loadResumeFromConfig } from '../config/loader'
+import i18n from '../i18n/config'
 import type { Resume } from '../types/resume'
 
-// Cache the loaded resume data
-let cachedResume: Resume | null = null
+/**
+ * Get resume data for current language
+ * Loads from data/resume.json (default) or data/resume.{lang}.json
+ */
+export const getResumeData = (lang?: string): Resume => {
+  const currentLang = lang || i18n.language || 'en'
+  return loadResumeFromConfig(currentLang)
+}
 
 /**
- * Get resume data from JSON configuration
- * For now, we load from a single resume.json file
- * Multilingual support can be added by creating separate JSON files
+ * Get resume data by specific language
+ * @param lang - Language code (e.g., 'en', 'ru', 'es')
  */
-export const getResumeData = (): Resume => {
-  if (!cachedResume) {
-    cachedResume = loadResumeFromConfig()
-  }
-  return cachedResume
+export const getResumeDataByLanguage = (lang: string): Resume => {
+  return loadResumeFromConfig(lang)
 }
 
 // Export default resume for backwards compatibility
-export const resumeData = getResumeData()
-
-// For multilingual support (future enhancement)
-// You can create resume.en.json and resume.ru.json
-// and load based on i18n.language
-export const getResumeDataByLanguage = (_lang?: string): Resume => {
-  // For now, return the same data regardless of language
-  // TODO: Implement language-specific resume loading if needed
-  // e.g., load from data/resume.en.json or data/resume.ru.json
-  // When implementing, use: const currentLang = _lang || i18n.language
-
-  return getResumeData()
-}
+export const resumeData = getResumeData('en')
 
 // Backwards compatibility exports
-export const resumeDataEn = getResumeData()
-export const resumeDataRu = getResumeData()
+export const resumeDataEn = getResumeData('en')
+export const resumeDataRu = getResumeData('ru')
