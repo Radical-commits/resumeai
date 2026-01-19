@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Sparkles, Target } from 'lucide-react'
-import { getSiteConfig } from '../config/loader'
+import { getResumeData } from '../data/resume'
 
 interface HeroProps {
   onOpenChat: () => void
@@ -9,8 +9,8 @@ interface HeroProps {
 }
 
 export const Hero = ({ onOpenChat, onOpenJobFit }: HeroProps) => {
-  const { t } = useTranslation()
-  const config = getSiteConfig()
+  const { t, i18n } = useTranslation()
+  const resumeData = getResumeData(i18n.language)
 
   return (
     <section className="hero">
@@ -28,13 +28,13 @@ export const Hero = ({ onOpenChat, onOpenJobFit }: HeroProps) => {
           </div>
 
           {/* Name with Serif Font */}
-          <h1 className="hero-name">{config.site.name}</h1>
+          <h1 className="hero-name">{resumeData.personalInfo.name}</h1>
 
           {/* Title */}
-          <p className="hero-title">{config.site.title}</p>
+          <p className="hero-title">{resumeData.personalInfo.title}</p>
 
           {/* Subtitle */}
-          <p className="hero-subtitle">{config.site.description}</p>
+          <p className="hero-subtitle">{resumeData.summary}</p>
 
           {/* Actions */}
           <div className="hero-actions">

@@ -48,7 +48,7 @@ export const Header = ({ onOpenChat }: HeaderProps) => {
           {onOpenChat && (
             <button className="btn btn-sm btn-primary" onClick={onOpenChat}>
               <Sparkles size={16} />
-              Ask AI
+              {t('hero.ctaChat')}
             </button>
           )}
           <LanguageSwitcher />
