@@ -233,8 +233,7 @@ Configure multilingual support.
 {
   "languages": {
     "default": "en",
-    "supported": ["en", "de", "zh"],
-    "enableLanguageSwitcher": true
+    "supported": ["en", "de", "zh"]
   }
 }
 ```
@@ -245,7 +244,8 @@ Configure multilingual support.
 |-------|------|----------|-------------|
 | `default` | string | Yes | Default language code (must be in supported list) |
 | `supported` | array | Yes | Array of language codes (e.g., ["en", "ru", "de"]) |
-| `enableLanguageSwitcher` | boolean | Yes | Show language switcher in header |
+
+**Note:** The language switcher visibility is controlled by `features.enableMultilingual`. Set it to `true` to show the switcher.
 
 ### Supported Language Codes
 
@@ -263,10 +263,10 @@ Configure multilingual support.
 
 ### Setup
 
-1. Add language codes to `supported` array
-2. Create corresponding `data/resume.{lang}.json` files
-3. Translations for UI text are in `data/translations.json`
-4. Set `enableLanguageSwitcher: true` to show selector
+1. Set `features.enableMultilingual: true` to enable the language switcher
+2. Add language codes to `languages.supported` array
+3. Create corresponding `data/resume.{lang}.json` files
+4. UI translations are in `data/translations.json`
 
 See [MULTILINGUAL-SETUP.md](./MULTILINGUAL-SETUP.md) for detailed setup instructions.
 
@@ -382,8 +382,7 @@ Deployment configuration (optional).
   },
   "languages": {
     "default": "en",
-    "supported": ["en", "de"],
-    "enableLanguageSwitcher": true
+    "supported": ["en", "de"]
   },
   "ai": {
     "provider": "groq",

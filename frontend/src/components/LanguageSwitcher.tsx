@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Globe } from 'lucide-react'
-import { getSupportedLanguages } from '../config/loader'
+import { getSupportedLanguages, isFeatureEnabled } from '../config/loader'
 
 // Language display names
 const languageNames: Record<string, string> = {
@@ -36,6 +36,11 @@ export const LanguageSwitcher = () => {
     if (i18n.language !== lang) {
       i18n.changeLanguage(lang)
     }
+  }
+
+  // If multilingual feature is disabled, don't show switcher
+  if (!isFeatureEnabled('enableMultilingual')) {
+    return null
   }
 
   // If only one language supported, don't show switcher

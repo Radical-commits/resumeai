@@ -49,7 +49,6 @@ export interface SiteConfig {
   languages: {
     default: string
     supported: string[]
-    enableLanguageSwitcher: boolean
   }
   ai: {
     provider: string
