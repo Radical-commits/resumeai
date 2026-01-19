@@ -1,0 +1,247 @@
+{
+  "personalInfo": {
+    "name": "Sarah Chen",
+    "title": "Senior Product Manager",
+    "location": "San Francisco, CA",
+    "phone": "+1 (415) 555-0123",
+    "email": "sarah.chen@example.com",
+    "linkedin": "https://linkedin.com/in/sarahchen",
+    "github": "https://github.com/schen",
+    "website": "https://sarahchen.com"
+  },
+  "summary": "Ergebnisorientierte Senior Product Managerin mit über 8 Jahren Erfahrung im Aufbau und der Skalierung von B2C-SaaS-Produkten für Millionen von Nutzern. Expertin für datengesteuerte Entscheidungsfindung, Wachstumsoptimierung und die Leitung funktionsübergreifender Teams von der Konzeption bis zur Markteinführung. Nachgewiesene Erfolgsbilanz bei der Steigerung des Nutzerengagements um über 40% und der Förderung des Umsatzwachstums durch innovative Produktfunktionen.",
+  "highlights": [
+    "Wuchs die aktive Nutzerbasis in 2 Jahren von 2 Mio. auf 8 Mio. Nutzer durch strategische Feature-Launches und Wachstumsinitiativen",
+    "Leitete die Neugestaltung des Onboarding-Flows, wodurch die Aktivierungsrate um 45% verbessert und die Time-to-Value um 60% reduziert wurde",
+    "Einführung einer KI-gestützten Empfehlungsmaschine, die die Nutzersitzungszeit um 35% erhöhte und zusätzliche 3 Mio. $ Umsatz generierte",
+    "Aufbau und Mentoring eines Teams von 3 Product Managern bei gleichzeitiger Verwaltung eines Portfolios von 5 Produktlinien"
+  ],
+  "skills": {
+    "productManagement": [
+      "Produktstrategie & Roadmapping",
+      "Nutzerforschung & Kundeninterviews",
+      "A/B-Testing & Experimente",
+      "Wachstums- & Retention-Strategie",
+      "Produktanalyse & Metriken",
+      "Agile & Scrum Methoden",
+      "Go-to-Market Strategie",
+      "Stakeholder Management"
+    ],
+    "technical": [
+      "SQL & Datenanalyse",
+      "API & Plattform-Integration",
+      "Mobile & Web-Technologien",
+      "Machine Learning Konzepte",
+      "System Design Grundlagen",
+      "REST APIs",
+      "JSON/XML"
+    ],
+    "tools": [
+      "Jira & Confluence",
+      "Figma & Sketch",
+      "Mixpanel & Amplitude",
+      "Google Analytics",
+      "Looker & Tableau",
+      "Productboard",
+      "Miro & FigJam",
+      "Postman"
+    ],
+    "domains": [
+      "B2C SaaS",
+      "Mobile-First Produkte",
+      "E-Commerce & Marktplätze",
+      "Social & Community Plattformen",
+      "Abonnement-Geschäftsmodelle",
+      "Freemium zu Premium Konversion"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Senior Product Manager",
+      "company": "StreamFlow (Social Media & Content Platform)",
+      "location": "San Francisco, CA",
+      "startDate": "März 2021",
+      "endDate": "Heute",
+      "current": true,
+      "description": "Leitung der Produktstrategie und -umsetzung für zentrale Engagement- und Monetarisierungsfunktionen für über 8 Mio. monatlich aktive Nutzer. Leitung funktionsübergreifender Teams mit über 15 Ingenieuren, Designern und Data Scientists.",
+      "achievements": [
+        "Erzielte 120% Nutzerwachstum (2 Mio. auf 8 Mio. MAU) durch Einführung einer Creator-Tools-Suite und viraler Sharing-Funktionen",
+        "Steigerung des durchschnittlichen Umsatzes pro Nutzer (ARPU) um 65% durch Premium-Abonnement-Stufe und In-App-Käufe",
+        "Einführung eines KI-gestützten Content-Empfehlungssystems, das die Sitzungszeit um 35% und die täglich aktiven Nutzer um 28% steigerte",
+        "Leitete Plattform-Redesign, das die Nutzerretention (D30) von 32% auf 51% verbesserte und die Abwanderung um 40% reduzierte",
+        "Etablierung einer datengesteuerten Experimentierkultur mit über 50 A/B-Tests pro Quartal mit 85% statistischer Signifikanz",
+        "Mentoring von 3 Product Managern und Aufbau von Best Practices für Product Management in der gesamten Organisation"
+      ],
+      "technologies": [
+        "Mixpanel",
+        "Amplitude",
+        "Figma",
+        "Jira",
+        "SQL",
+        "Python",
+        "TensorFlow",
+        "AWS",
+        "GraphQL"
+      ]
+    },
+    {
+      "title": "Product Manager",
+      "company": "FitLife (Health & Wellness App)",
+      "location": "San Francisco, CA",
+      "startDate": "Juni 2018",
+      "endDate": "Februar 2021",
+      "current": false,
+      "description": "Verantwortung für die End-to-End-Produktentwicklung von Fitness-Tracking- und Social-Funktionen in Zusammenarbeit mit Teams von über 10 Ingenieuren und Designern zur Einführung wirkungsvoller Features für über 3 Mio. Nutzer.",
+      "achievements": [
+        "Einführung der Community-Challenge-Funktion, die eine 200%ige Steigerung nutzergenerierter Inhalte und einen 45%igen Anstieg der wöchentlich aktiven Nutzer bewirkte",
+        "Neugestaltung des Onboarding-Flows unter Verwendung des Jobs-to-be-Done-Frameworks, wodurch die Aktivierungsrate von 38% auf 65% verbessert wurde",
+        "Implementierung eines Freemium-zu-Premium-Konversionstrichters, der die zahlenden Abonnenten um 85% steigerte (2,5 Mio. $ ARR)",
+        "Entwicklung einer personalisierten Trainingsempfehlungsmaschine mit kollaborativem Filtern, wodurch die Abschlussraten um 52% stiegen",
+        "Leitete Mobile-App-Redesign, das die App-Store-Bewertung von 3,8 auf 4,7 Sterne mit über 10.000 Bewertungen verbesserte",
+        "Reduzierung der Kundensupport-Tickets um 35% durch In-App-Schulungen und verbesserte UX"
+      ],
+      "technologies": [
+        "Google Analytics",
+        "Optimizely",
+        "Sketch",
+        "Productboard",
+        "SQL",
+        "Looker",
+        "Firebase",
+        "REST APIs"
+      ]
+    },
+    {
+      "title": "Associate Product Manager",
+      "company": "ShopCircle (E-Commerce-Marktplatz)",
+      "location": "Palo Alto, CA",
+      "startDate": "Juli 2016",
+      "endDate": "Mai 2018",
+      "current": false,
+      "description": "Unterstützung der Produktentwicklung für Käufererlebnis und Suchfunktionen auf einer wachsenden Marktplatz-Plattform mit über 500.000 monatlichen Transaktionen.",
+      "achievements": [
+        "Einführung der intelligenten Suche mit Autovervollständigung und Filtern, wodurch die Suche-zu-Kauf-Konversion um 32% gesteigert wurde",
+        "Implementierung eines One-Click-Checkout-Flows, der die Warenkorbabbruchrate von 68% auf 42% reduzierte",
+        "Aufbau eines Verkäuferbewertungs- und Rezensionssystems, das das Käufervertrauen erhöhte und den GMV um 25% steigerte",
+        "Durchführung von über 40 Nutzerinterviews und Usability-Tests zur Information der Produktroadmap und Feature-Priorisierung",
+        "Zusammenarbeit mit dem Engineering-Team zur Verbesserung der Seitenladezeiten um 40%, wodurch die Absprungrate um 18% reduziert wurde"
+      ],
+      "technologies": [
+        "Google Analytics",
+        "Hotjar",
+        "Balsamiq",
+        "Jira",
+        "SQL",
+        "Stripe API",
+        "Shopify APIs"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Business Administration (MBA)",
+      "institution": "Stanford Graduate School of Business",
+      "location": "Stanford, CA",
+      "graduationDate": "Juni 2016",
+      "honors": "Arjay Miller Scholar (Top 10%)",
+      "relevantCourses": [
+        "Product Management & Marketing",
+        "Datengesteuerte Entscheidungsfindung",
+        "Technologie-Unternehmertum",
+        "Design Thinking"
+      ]
+    },
+    {
+      "degree": "Bachelor of Science in Informatik",
+      "institution": "University of California, Berkeley",
+      "location": "Berkeley, CA",
+      "graduationDate": "Mai 2014",
+      "honors": "Magna Cum Laude, Dean's List",
+      "relevantCourses": [
+        "Mensch-Computer-Interaktion",
+        "Datenbanksysteme",
+        "Software-Engineering",
+        "Machine Learning"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Scrum Product Owner (CSPO)",
+      "issuer": "Scrum Alliance",
+      "date": "März 2019",
+      "credentialId": "001234567",
+      "url": "https://www.scrumalliance.org/get-certified/product-owner-track/certified-scrum-product-owner"
+    },
+    {
+      "name": "Google Analytics Individual Qualification (GAIQ)",
+      "issuer": "Google",
+      "date": "Januar 2023",
+      "credentialId": "12345678",
+      "url": "https://skillshop.exceedlms.com/student/catalog/list?category_ids=53-google-analytics-4"
+    },
+    {
+      "name": "Product-Led Growth Certification",
+      "issuer": "Product-Led Alliance",
+      "date": "September 2022",
+      "credentialId": "PLG-2022-0987",
+      "url": "https://www.productledalliance.com/"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Englisch",
+      "proficiency": "Muttersprache"
+    },
+    {
+      "language": "Mandarin-Chinesisch",
+      "proficiency": "Muttersprache (Zweisprachig)"
+    },
+    {
+      "language": "Spanisch",
+      "proficiency": "Berufliche Arbeitskenntnisse"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Product Manager Mentoring-Programm",
+      "description": "Gründung eines Mentoring-Programms zur Verbindung erfahrener PMs mit aufstrebenden Produktfachleuten",
+      "role": "Gründerin & Leitende Mentorin",
+      "technologies": [],
+      "url": "https://pmmentorship.org",
+      "highlights": [
+        "Mentoring von über 25 Junior-PMs beim Übergang ins Product Management",
+        "Erstellung eines Curriculums zu Produktstrategie, Nutzerforschung und Datenanalyse",
+        "90% der Mentees sicherten sich PM-Rollen innerhalb von 6 Monaten"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Product Leader des Jahres",
+      "issuer": "Women in Product",
+      "date": "2023",
+      "description": "Ausgezeichnet für Exzellenz in Produktführung und Mentoring"
+    },
+    {
+      "title": "40 Under 40 in Tech",
+      "issuer": "Silicon Valley Business Journal",
+      "date": "2022",
+      "description": "Featured als aufstrebende Führungspersönlichkeit in Technologie und Produktinnovation"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Aufbau von Wachstumsschleifen in B2C-Produkten",
+      "publisher": "Product Coalition (Medium)",
+      "date": "Oktober 2023",
+      "url": "https://productcoalition.com"
+    },
+    {
+      "title": "Von 0 auf 1 Mio. Nutzer: Lektionen in Product-Market Fit",
+      "publisher": "Mind the Product",
+      "date": "Juni 2022",
+      "url": "https://www.mindtheproduct.com"
+    }
+  ]
+}
