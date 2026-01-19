@@ -1,19 +1,19 @@
 {
   "site": {
-    "name": "Your Name",
-    "title": "Your Professional Title",
-    "domain": "https://yourdomain.com",
-    "description": "Your professional summary that describes your expertise and experience",
+    "name": "Sarah Chen",
+    "title": "Senior Product Manager",
+    "domain": "https://sarahchen.com",
+    "description": "Senior Product Manager specializing in B2C SaaS products. 8+ years of experience scaling products from 0 to millions of users.",
     "language": "en",
     "ogImage": "/og-image.png",
     "favicon": "/favicon.ico"
   },
   "contact": {
-    "email": "you@example.com",
-    "phone": "+1 234 567 8900",
-    "location": "City, Country",
-    "linkedin": "https://linkedin.com/in/yourprofile",
-    "github": "https://github.com/yourusername"
+    "email": "sarah.chen@example.com",
+    "phone": "+1 (415) 555-0123",
+    "location": "San Francisco, CA",
+    "linkedin": "https://linkedin.com/in/sarahchen",
+    "github": "https://github.com/schen"
   },
   "theme": "professional",
   "features": {
