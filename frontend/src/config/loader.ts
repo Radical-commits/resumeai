@@ -37,7 +37,6 @@ export interface SiteConfig {
     enableChat: boolean
     enableJobFit: boolean
     enableMultilingual: boolean
-    enableResumePDF: boolean
   }
   branding: {
     primaryColor: string

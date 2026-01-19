@@ -124,8 +124,7 @@ Create or edit `config.json`:
   "features": {
     "enableChat": true,
     "enableJobFit": true,
-    "enableMultilingual": false,
-    "enableResumePDF": false
+    "enableMultilingual": false
   },
   "branding": {
     "primaryColor": "#14b8a6",
@@ -231,7 +230,6 @@ npm run dev
 | `features.enableChat` | boolean | true | Enable AI chatbot |
 | `features.enableJobFit` | boolean | true | Enable job fit assessment |
 | `features.enableMultilingual` | boolean | false | Enable language switching |
-| `features.enableResumePDF` | boolean | false | Enable PDF download |
 
 ### Branding (Optional)
 

@@ -19,8 +19,7 @@
   "features": {
     "enableChat": true,
     "enableJobFit": true,
-    "enableMultilingual": false,
-    "enableResumePDF": false
+    "enableMultilingual": true
   },
   "branding": {
     "primaryColor": "#14b8a6",

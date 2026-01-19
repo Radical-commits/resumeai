@@ -155,8 +155,7 @@ Enable or disable specific features.
   "features": {
     "enableChat": true,
     "enableJobFit": true,
-    "enableMultilingual": false,
-    "enableResumePDF": false
+    "enableMultilingual": false
   }
 }
 ```
@@ -168,7 +167,6 @@ Enable or disable specific features.
 | `enableChat` | boolean | true | Show AI chat button and enable chatbot |
 | `enableJobFit` | boolean | true | Enable job fit assessment feature |
 | `enableMultilingual` | boolean | false | Enable language switcher (requires translations) |
-| `enableResumePDF` | boolean | false | Show download resume button |
 
 ### Feature Details
 
@@ -187,10 +185,6 @@ Enable or disable specific features.
 - Requires `languages.supported` with multiple languages
 - Requires corresponding `data/resume.{lang}.json` files
 - See [MULTILINGUAL-SETUP.md](./MULTILINGUAL-SETUP.md) for details
-
-**enableResumePDF**
-- Displays download button for PDF resume
-- Requires PDF file in `frontend/public/resume.pdf`
 
 ## Branding Overrides
 
@@ -370,8 +364,7 @@ Deployment configuration (optional).
   "features": {
     "enableChat": true,
     "enableJobFit": true,
-    "enableMultilingual": false,
-    "enableResumePDF": false
+    "enableMultilingual": false
   },
   "branding": {
     "primaryColor": "#14b8a6",
