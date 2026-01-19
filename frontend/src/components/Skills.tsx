@@ -7,32 +7,43 @@ export const Skills = () => {
   const { t } = useTranslation()
   const resumeData = getResumeData()
 
-  const skillCategories = [
-    {
-      title: t('skills.categoryStrong'),
-      type: 'strong',
-      icon: Check,
-      skills: [
-        ...resumeData.skills.aiAndAutomation,
-        ...resumeData.skills.productManagement.slice(0, 6),
-      ],
-    },
-    {
-      title: t('skills.categoryModerate'),
-      type: 'moderate',
-      icon: Circle,
-      skills: [
-        ...resumeData.skills.technical.slice(0, 8),
-        ...resumeData.skills.domains.slice(0, 5),
-      ],
-    },
-    {
-      title: t('skills.categoryGaps'),
-      type: 'gaps',
-      icon: X,
-      skills: resumeData.skills.gaps,
-    },
-  ]
+  // Dynamically build skill categories from resume data
+  const skillCategories: Array<{
+    title: string
+    type: string
+    icon: any
+    skills: string[]
+  }> = []
+
+  // Convert camelCase to Title Case for display
+  const formatCategoryName = (key: string): string => {
+    return key
+      .replace(/([A-Z])/g, ' $1')
+      .replace(/^./, (str) => str.toUpperCase())
+      .trim()
+  }
+
+  // Iterate over skill categories dynamically
+  if (resumeData.skills && typeof resumeData.skills === 'object') {
+    const skillKeys = Object.keys(resumeData.skills)
+
+    skillKeys.forEach((key, index) => {
+      const skills = (resumeData.skills as any)[key]
+
+      if (Array.isArray(skills) && skills.length > 0) {
+        // Alternate between icons for visual variety
+        const icons = [Check, Circle, Check]
+        const types = ['strong', 'moderate', 'strong']
+
+        skillCategories.push({
+          title: formatCategoryName(key),
+          type: types[index % types.length],
+          icon: icons[index % icons.length],
+          skills: skills,
+        })
+      }
+    })
+  }
 
   return (
     <section id="skills" className="section">
