@@ -274,19 +274,10 @@ function generateConfigFiles(answers) {
       fs.mkdirSync(backendDir, { recursive: true });
     }
 
-    let envContent = `# AI Service Configuration\n`;
+    let envContent = `# AI Service Configuration (works for all providers)\n`;
 
-    // Add provider-specific API key
-    if (answers.aiProvider === 'groq') {
-      envContent += `GROQ_API_KEY=${answers.apiKey}\n`;
-    } else if (answers.aiProvider === 'openai') {
-      envContent += `OPENAI_API_KEY=${answers.apiKey}\n`;
-    } else if (answers.aiProvider === 'google') {
-      envContent += `GOOGLE_API_KEY=${answers.apiKey}\n`;
-    } else if (answers.aiProvider === 'anthropic') {
-      envContent += `ANTHROPIC_API_KEY=${answers.apiKey}\n`;
-    }
-
+    // Use generic AI_API_KEY
+    envContent += `AI_API_KEY=${answers.apiKey}\n`;
     envContent += `AI_PROVIDER=${answers.aiProvider}
 AI_MODEL=${getDefaultModel(answers.aiProvider)}
 
