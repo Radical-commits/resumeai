@@ -1,0 +1,247 @@
+{
+  "personalInfo": {
+    "name": "Sarah Chen",
+    "title": "高级产品经理",
+    "location": "加利福尼亚州旧金山",
+    "phone": "+1 (415) 555-0123",
+    "email": "sarah.chen@example.com",
+    "linkedin": "https://linkedin.com/in/sarahchen",
+    "github": "https://github.com/schen",
+    "website": "https://sarahchen.com"
+  },
+  "summary": "以结果为导向的高级产品经理，拥有8年以上为数百万用户构建和扩展B2C SaaS产品的经验。擅长数据驱动决策、增长优化，以及领导跨职能团队从发现到发布的全过程。成功将用户参与度提高40%以上，并通过创新产品功能推动收入增长。",
+  "highlights": [
+    "通过战略性功能发布和增长计划，在2年内将活跃用户群从200万增长至800万",
+    "主导用户引导流程重新设计，将激活率提高45%，价值实现时间缩短60%",
+    "推出AI驱动的推荐引擎，将用户会话时间增加35%，带来300万美元增量收入",
+    "组建并指导3名产品经理团队，同时管理5个产品线的组合"
+  ],
+  "skills": {
+    "productManagement": [
+      "产品战略与路线图规划",
+      "用户研究与客户访谈",
+      "A/B测试与实验",
+      "增长与留存策略",
+      "产品分析与指标",
+      "敏捷与Scrum方法论",
+      "上市策略",
+      "利益相关者管理"
+    ],
+    "technical": [
+      "SQL与数据分析",
+      "API与平台集成",
+      "移动端与Web技术",
+      "机器学习概念",
+      "系统设计基础",
+      "REST APIs",
+      "JSON/XML"
+    ],
+    "tools": [
+      "Jira与Confluence",
+      "Figma与Sketch",
+      "Mixpanel与Amplitude",
+      "Google Analytics",
+      "Looker与Tableau",
+      "Productboard",
+      "Miro与FigJam",
+      "Postman"
+    ],
+    "domains": [
+      "B2C SaaS",
+      "移动优先产品",
+      "电商与市场平台",
+      "社交与社区平台",
+      "订阅业务模式",
+      "免费增值到高级版转化"
+    ]
+  },
+  "experience": [
+    {
+      "title": "高级产品经理",
+      "company": "StreamFlow（社交媒体与内容平台）",
+      "location": "加利福尼亚州旧金山",
+      "startDate": "2021年3月",
+      "endDate": "至今",
+      "current": true,
+      "description": "主导核心参与度和变现功能的产品战略和执行，服务800万以上月活跃用户。管理由15名以上工程师、设计师和数据科学家组成的跨职能团队。",
+      "achievements": [
+        "通过推出创作者工具套件和病毒式分享功能，推动120%的用户增长（从200万月活跃用户增至800万）",
+        "通过高级订阅层级和应用内购买，将平均每用户收入（ARPU）提高65%",
+        "交付AI驱动的内容推荐系统，将会话时间提高35%，日活跃用户增加28%",
+        "主导平台重新设计，将用户留存率（D30）从32%提升至51%，流失率降低40%",
+        "建立数据驱动的实验文化，每季度运行50多个A/B测试，85%达到统计显著性",
+        "指导3名产品经理，并在组织内建立产品管理最佳实践"
+      ],
+      "technologies": [
+        "Mixpanel",
+        "Amplitude",
+        "Figma",
+        "Jira",
+        "SQL",
+        "Python",
+        "TensorFlow",
+        "AWS",
+        "GraphQL"
+      ]
+    },
+    {
+      "title": "产品经理",
+      "company": "FitLife（健康与健身应用）",
+      "location": "加利福尼亚州旧金山",
+      "startDate": "2018年6月",
+      "endDate": "2021年2月",
+      "current": false,
+      "description": "全面负责健身追踪和社交功能的端到端产品开发，与10名以上工程师和设计师团队合作，为300万以上用户推出高影响力功能。",
+      "achievements": [
+        "推出社区挑战功能，推动用户生成内容增加200%，周活跃用户提升45%",
+        "使用Jobs-to-be-Done框架重新设计用户引导流程，将激活率从38%提高至65%",
+        "实施免费增值到高级版转化漏斗，将付费订阅者增加85%（250万美元年度经常性收入）",
+        "使用协同过滤构建个性化训练推荐引擎，将完成率提高52%",
+        "主导移动应用重新设计，将App Store评分从3.8星提升至4.7星，获得1万多条评价",
+        "通过应用内教育和改进用户体验，将客户支持工单减少35%"
+      ],
+      "technologies": [
+        "Google Analytics",
+        "Optimizely",
+        "Sketch",
+        "Productboard",
+        "SQL",
+        "Looker",
+        "Firebase",
+        "REST APIs"
+      ]
+    },
+    {
+      "title": "助理产品经理",
+      "company": "ShopCircle（电商市场平台）",
+      "location": "加利福尼亚州帕洛阿尔托",
+      "startDate": "2016年7月",
+      "endDate": "2018年5月",
+      "current": false,
+      "description": "支持买家体验和搜索功能的产品开发，服务于每月50万以上交易量的成长型市场平台。",
+      "achievements": [
+        "推出带自动完成和筛选的智能搜索，将搜索到购买的转化率提高32%",
+        "实施一键结账流程，将购物车放弃率从68%降至42%",
+        "构建卖家评级和评论系统，增加买家信任并将GMV提升25%",
+        "进行40多次用户访谈和可用性测试，为产品路线图和功能优先级提供信息",
+        "与工程团队合作，将页面加载时间缩短40%，跳出率降低18%"
+      ],
+      "technologies": [
+        "Google Analytics",
+        "Hotjar",
+        "Balsamiq",
+        "Jira",
+        "SQL",
+        "Stripe API",
+        "Shopify APIs"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "工商管理硕士（MBA）",
+      "institution": "斯坦福大学商学院",
+      "location": "加利福尼亚州斯坦福",
+      "graduationDate": "2016年6月",
+      "honors": "Arjay Miller学者（前10%）",
+      "relevantCourses": [
+        "产品管理与营销",
+        "数据驱动决策",
+        "技术创业",
+        "设计思维"
+      ]
+    },
+    {
+      "degree": "计算机科学学士",
+      "institution": "加州大学伯克利分校",
+      "location": "加利福尼亚州伯克利",
+      "graduationDate": "2014年5月",
+      "honors": "优等生（Magna Cum Laude），院长名单",
+      "relevantCourses": [
+        "人机交互",
+        "数据库系统",
+        "软件工程",
+        "机器学习"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "认证Scrum产品负责人（CSPO）",
+      "issuer": "Scrum Alliance",
+      "date": "2019年3月",
+      "credentialId": "001234567",
+      "url": "https://www.scrumalliance.org/get-certified/product-owner-track/certified-scrum-product-owner"
+    },
+    {
+      "name": "Google Analytics个人资格认证（GAIQ）",
+      "issuer": "Google",
+      "date": "2023年1月",
+      "credentialId": "12345678",
+      "url": "https://skillshop.exceedlms.com/student/catalog/list?category_ids=53-google-analytics-4"
+    },
+    {
+      "name": "产品主导增长认证",
+      "issuer": "Product-Led Alliance",
+      "date": "2022年9月",
+      "credentialId": "PLG-2022-0987",
+      "url": "https://www.productledalliance.com/"
+    }
+  ],
+  "languages": [
+    {
+      "language": "英语",
+      "proficiency": "母语"
+    },
+    {
+      "language": "普通话",
+      "proficiency": "母语（双语）"
+    },
+    {
+      "language": "西班牙语",
+      "proficiency": "专业工作水平"
+    }
+  ],
+  "projects": [
+    {
+      "name": "产品经理导师计划",
+      "description": "创立导师计划，连接经验丰富的产品经理与有抱负的产品专业人士",
+      "role": "创始人兼首席导师",
+      "technologies": [],
+      "url": "https://pmmentorship.org",
+      "highlights": [
+        "指导25名以上初级产品经理转型进入产品管理领域",
+        "创建涵盖产品战略、用户研究和数据分析的课程",
+        "90%的学员在6个月内获得产品经理职位"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "年度产品领导者",
+      "issuer": "Women in Product",
+      "date": "2023年",
+      "description": "因在产品领导力和导师制方面的卓越表现而获得认可"
+    },
+    {
+      "title": "科技领域40位40岁以下精英",
+      "issuer": "硅谷商业期刊",
+      "date": "2022年",
+      "description": "被评为技术和产品创新领域的新兴领袖"
+    }
+  ],
+  "publications": [
+    {
+      "title": "在B2C产品中构建增长循环",
+      "publisher": "Product Coalition (Medium)",
+      "date": "2023年10月",
+      "url": "https://productcoalition.com"
+    },
+    {
+      "title": "从0到100万用户：产品市场契合度的经验教训",
+      "publisher": "Mind the Product",
+      "date": "2022年6月",
+      "url": "https://www.mindtheproduct.com"
+    }
+  ]
+}

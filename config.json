@@ -31,7 +31,7 @@
   },
   "languages": {
     "default": "en",
-    "supported": ["en","de"],
+    "supported": ["en","zh"],
     "enableLanguageSwitcher": true
   },
   "ai": {

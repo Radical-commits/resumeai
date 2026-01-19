@@ -12,6 +12,7 @@ import type { Resume } from '../types/resume'
 // Import language-specific resume files statically for Vite bundling
 // Only import files that exist; others will be undefined
 import resumeDeData from '../../../data/resume.de.json'
+import resumeZhData from '../../../data/resume.zh.json'
 
 // Type for site configuration
 export interface SiteConfig {
@@ -74,6 +75,7 @@ export function getSiteConfig(): SiteConfig {
 // Vite will statically bundle these at build time
 const languageResumes: Record<string, Resume> = {
   de: resumeDeData as Resume,
+  zh: resumeZhData as Resume,
 }
 
 // Cache for loaded resumes
