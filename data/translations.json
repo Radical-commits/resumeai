@@ -156,5 +156,558 @@
       "retry": "Повторить",
       "close": "Закрыть"
     }
+  },
+  "es": {
+    "nav": {
+      "about": "Acerca de",
+      "experience": "Experiencia",
+      "skills": "Habilidades",
+      "education": "Educación",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "greeting": "Hola, soy",
+      "statusBadge": "Disponible para contratar",
+      "subtitle": "Tu eslogan profesional",
+      "ctaJobFit": "Verificar ajuste laboral",
+      "ctaChat": "Pregúntale a la IA sobre mí",
+      "ctaResume": "Descargar CV"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "highlights": "Aspectos destacados"
+    },
+    "experience": {
+      "title": "Experiencia profesional",
+      "present": "Presente",
+      "promoted": "Promovido desde",
+      "location": "Ubicación",
+      "viewMore": "Ver detalles",
+      "viewLess": "Ocultar detalles"
+    },
+    "skills": {
+      "title": "Habilidades y experiencia",
+      "aiAutomation": "IA y automatización",
+      "technical": "Habilidades técnicas",
+      "productManagement": "Gestión de productos",
+      "domains": "Experiencia en dominios",
+      "categoryStrong": "FORTALEZAS PRINCIPALES",
+      "categoryModerate": "CONOCIMIENTO PRÁCTICO",
+      "categoryGaps": "ÁREAS DE CRECIMIENTO"
+    },
+    "education": {
+      "title": "Educación y certificaciones",
+      "degrees": "Títulos académicos",
+      "certifications": "Certificaciones",
+      "languages": "Idiomas",
+      "patents": "Patentes"
+    },
+    "footer": {
+      "contact": "Ponte en contacto",
+      "email": "Correo electrónico",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "rights": "Todos los derechos reservados"
+    },
+    "chat": {
+      "title": "Chat con asistente IA",
+      "subtitle": "Pregúntame sobre mi experiencia",
+      "placeholder": "Pregúntame sobre mi experiencia...",
+      "send": "Enviar",
+      "close": "Cerrar",
+      "open": "Abrir chat",
+      "typing": "IA está escribiendo...",
+      "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+      "errorRetry": "Reintentar",
+      "welcome": "¡Hola! Soy un asistente de IA entrenado en mi trayectoria profesional. Pregúntame lo que quieras sobre mi experiencia, habilidades o carrera.",
+      "jobFit": {
+        "title": "Evaluación de ajuste laboral",
+        "subtitle": "Pega una descripción de trabajo para evaluar",
+        "placeholder": "Pega la descripción del trabajo aquí...",
+        "assess": "Evaluar ajuste",
+        "back": "Volver al chat",
+        "analyzing": "Analizando ajuste laboral..."
+      }
+    },
+    "common": {
+      "loading": "Cargando...",
+      "error": "Error",
+      "retry": "Reintentar",
+      "close": "Cerrar"
+    }
+  },
+  "fr": {
+    "nav": {
+      "about": "À propos",
+      "experience": "Expérience",
+      "skills": "Compétences",
+      "education": "Formation",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Bonjour, je suis",
+      "statusBadge": "Disponible pour embauche",
+      "subtitle": "Votre slogan professionnel",
+      "ctaJobFit": "Vérifier l'adéquation",
+      "ctaChat": "Demander à l'IA sur moi",
+      "ctaResume": "Télécharger le CV"
+    },
+    "about": {
+      "title": "À propos de moi",
+      "highlights": "Points clés"
+    },
+    "experience": {
+      "title": "Expérience professionnelle",
+      "present": "Présent",
+      "promoted": "Promu depuis",
+      "location": "Lieu",
+      "viewMore": "Voir les détails",
+      "viewLess": "Masquer les détails"
+    },
+    "skills": {
+      "title": "Compétences et expertise",
+      "aiAutomation": "IA et automatisation",
+      "technical": "Compétences techniques",
+      "productManagement": "Gestion de produit",
+      "domains": "Expertise de domaine",
+      "categoryStrong": "FORCES PRINCIPALES",
+      "categoryModerate": "CONNAISSANCES PRATIQUES",
+      "categoryGaps": "DOMAINES DE CROISSANCE"
+    },
+    "education": {
+      "title": "Formation et certifications",
+      "degrees": "Diplômes universitaires",
+      "certifications": "Certifications",
+      "languages": "Langues",
+      "patents": "Brevets"
+    },
+    "footer": {
+      "contact": "Entrer en contact",
+      "email": "E-mail",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "rights": "Tous droits réservés"
+    },
+    "chat": {
+      "title": "Chat avec assistant IA",
+      "subtitle": "Posez-moi des questions sur mon expérience",
+      "placeholder": "Posez-moi des questions sur mon expérience...",
+      "send": "Envoyer",
+      "close": "Fermer",
+      "open": "Ouvrir le chat",
+      "typing": "L'IA écrit...",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "errorRetry": "Réessayer",
+      "welcome": "Bonjour ! Je suis un assistant IA formé sur mon parcours professionnel. N'hésitez pas à me poser des questions sur mon expérience, mes compétences ou ma carrière.",
+      "jobFit": {
+        "title": "Évaluation de l'adéquation au poste",
+        "subtitle": "Collez une description de poste pour évaluer",
+        "placeholder": "Collez la description du poste ici...",
+        "assess": "Évaluer l'adéquation",
+        "back": "Retour au chat",
+        "analyzing": "Analyse de l'adéquation..."
+      }
+    },
+    "common": {
+      "loading": "Chargement...",
+      "error": "Erreur",
+      "retry": "Réessayer",
+      "close": "Fermer"
+    }
+  },
+  "de": {
+    "nav": {
+      "about": "Über mich",
+      "experience": "Erfahrung",
+      "skills": "Fähigkeiten",
+      "education": "Bildung",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "greeting": "Hallo, ich bin",
+      "statusBadge": "Verfügbar für Einstellung",
+      "subtitle": "Ihr professioneller Slogan",
+      "ctaJobFit": "Job-Eignung prüfen",
+      "ctaChat": "KI über mich fragen",
+      "ctaResume": "Lebenslauf herunterladen"
+    },
+    "about": {
+      "title": "Über mich",
+      "highlights": "Wichtige Highlights"
+    },
+    "experience": {
+      "title": "Berufserfahrung",
+      "present": "Gegenwart",
+      "promoted": "Befördert von",
+      "location": "Standort",
+      "viewMore": "Details anzeigen",
+      "viewLess": "Details ausblenden"
+    },
+    "skills": {
+      "title": "Fähigkeiten und Expertise",
+      "aiAutomation": "KI und Automatisierung",
+      "technical": "Technische Fähigkeiten",
+      "productManagement": "Produktmanagement",
+      "domains": "Domänenexpertise",
+      "categoryStrong": "KERNSTÄRKEN",
+      "categoryModerate": "PRAKTISCHES WISSEN",
+      "categoryGaps": "WACHSTUMSBEREICHE"
+    },
+    "education": {
+      "title": "Bildung und Zertifizierungen",
+      "degrees": "Akademische Grade",
+      "certifications": "Zertifizierungen",
+      "languages": "Sprachen",
+      "patents": "Patente"
+    },
+    "footer": {
+      "contact": "Kontakt aufnehmen",
+      "email": "E-Mail",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "rights": "Alle Rechte vorbehalten"
+    },
+    "chat": {
+      "title": "Chat mit KI-Assistent",
+      "subtitle": "Fragen Sie mich zu meiner Erfahrung",
+      "placeholder": "Fragen Sie mich zu meiner Erfahrung...",
+      "send": "Senden",
+      "close": "Schließen",
+      "open": "Chat öffnen",
+      "typing": "KI schreibt...",
+      "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
+      "errorRetry": "Wiederholen",
+      "welcome": "Hallo! Ich bin ein KI-Assistent, der auf meinem beruflichen Hintergrund trainiert wurde. Fragen Sie mich gerne zu meiner Erfahrung, meinen Fähigkeiten oder meiner Karriere.",
+      "jobFit": {
+        "title": "Job-Eignungsbewertung",
+        "subtitle": "Stellenbeschreibung einfügen zur Bewertung",
+        "placeholder": "Stellenbeschreibung hier einfügen...",
+        "assess": "Eignung bewerten",
+        "back": "Zurück zum Chat",
+        "analyzing": "Job-Eignung wird analysiert..."
+      }
+    },
+    "common": {
+      "loading": "Lädt...",
+      "error": "Fehler",
+      "retry": "Wiederholen",
+      "close": "Schließen"
+    }
+  },
+  "pt": {
+    "nav": {
+      "about": "Sobre",
+      "experience": "Experiência",
+      "skills": "Habilidades",
+      "education": "Educação",
+      "contact": "Contato"
+    },
+    "hero": {
+      "greeting": "Olá, eu sou",
+      "statusBadge": "Disponível para contratação",
+      "subtitle": "Seu slogan profissional",
+      "ctaJobFit": "Verificar adequação",
+      "ctaChat": "Perguntar à IA sobre mim",
+      "ctaResume": "Baixar currículo"
+    },
+    "about": {
+      "title": "Sobre mim",
+      "highlights": "Destaques principais"
+    },
+    "experience": {
+      "title": "Experiência profissional",
+      "present": "Presente",
+      "promoted": "Promovido de",
+      "location": "Localização",
+      "viewMore": "Ver detalhes",
+      "viewLess": "Ocultar detalhes"
+    },
+    "skills": {
+      "title": "Habilidades e expertise",
+      "aiAutomation": "IA e automação",
+      "technical": "Habilidades técnicas",
+      "productManagement": "Gestão de produtos",
+      "domains": "Expertise de domínio",
+      "categoryStrong": "PONTOS FORTES PRINCIPAIS",
+      "categoryModerate": "CONHECIMENTO PRÁTICO",
+      "categoryGaps": "ÁREAS DE CRESCIMENTO"
+    },
+    "education": {
+      "title": "Educação e certificações",
+      "degrees": "Diplomas acadêmicos",
+      "certifications": "Certificações",
+      "languages": "Idiomas",
+      "patents": "Patentes"
+    },
+    "footer": {
+      "contact": "Entre em contato",
+      "email": "E-mail",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "rights": "Todos os direitos reservados"
+    },
+    "chat": {
+      "title": "Chat com assistente IA",
+      "subtitle": "Pergunte-me sobre minha experiência",
+      "placeholder": "Pergunte-me sobre minha experiência...",
+      "send": "Enviar",
+      "close": "Fechar",
+      "open": "Abrir chat",
+      "typing": "IA está digitando...",
+      "error": "Algo deu errado. Por favor, tente novamente.",
+      "errorRetry": "Tentar novamente",
+      "welcome": "Olá! Sou um assistente de IA treinado em meu histórico profissional. Sinta-se à vontade para me perguntar qualquer coisa sobre minha experiência, habilidades ou carreira.",
+      "jobFit": {
+        "title": "Avaliação de adequação ao trabalho",
+        "subtitle": "Cole uma descrição de trabalho para avaliar",
+        "placeholder": "Cole a descrição do trabalho aqui...",
+        "assess": "Avaliar adequação",
+        "back": "Voltar ao chat",
+        "analyzing": "Analisando adequação ao trabalho..."
+      }
+    },
+    "common": {
+      "loading": "Carregando...",
+      "error": "Erro",
+      "retry": "Tentar novamente",
+      "close": "Fechar"
+    }
+  },
+  "zh": {
+    "nav": {
+      "about": "关于",
+      "experience": "经验",
+      "skills": "技能",
+      "education": "教育",
+      "contact": "联系"
+    },
+    "hero": {
+      "greeting": "你好，我是",
+      "statusBadge": "可受雇",
+      "subtitle": "您的专业标语",
+      "ctaJobFit": "检查工作匹配度",
+      "ctaChat": "向AI询问关于我",
+      "ctaResume": "下载简历"
+    },
+    "about": {
+      "title": "关于我",
+      "highlights": "主要亮点"
+    },
+    "experience": {
+      "title": "专业经验",
+      "present": "至今",
+      "promoted": "晋升自",
+      "location": "地点",
+      "viewMore": "查看详情",
+      "viewLess": "隐藏详情"
+    },
+    "skills": {
+      "title": "技能与专长",
+      "aiAutomation": "人工智能与自动化",
+      "technical": "技术技能",
+      "productManagement": "产品管理",
+      "domains": "领域专长",
+      "categoryStrong": "核心优势",
+      "categoryModerate": "实用知识",
+      "categoryGaps": "成长领域"
+    },
+    "education": {
+      "title": "教育与认证",
+      "degrees": "学术学位",
+      "certifications": "认证",
+      "languages": "语言",
+      "patents": "专利"
+    },
+    "footer": {
+      "contact": "联系我",
+      "email": "电子邮件",
+      "linkedin": "领英",
+      "github": "GitHub",
+      "rights": "版权所有"
+    },
+    "chat": {
+      "title": "与AI助手聊天",
+      "subtitle": "询问我的经验",
+      "placeholder": "询问我的经验...",
+      "send": "发送",
+      "close": "关闭",
+      "open": "打开聊天",
+      "typing": "AI正在输入...",
+      "error": "出错了。请重试。",
+      "errorRetry": "重试",
+      "welcome": "你好！我是一个基于我的专业背景训练的AI助手。随时问我关于我的经验、技能或职业的任何问题。",
+      "jobFit": {
+        "title": "工作匹配度评估",
+        "subtitle": "粘贴职位描述以评估",
+        "placeholder": "在此粘贴职位描述...",
+        "assess": "评估匹配度",
+        "back": "返回聊天",
+        "analyzing": "正在分析工作匹配度..."
+      }
+    },
+    "common": {
+      "loading": "加载中...",
+      "error": "错误",
+      "retry": "重试",
+      "close": "关闭"
+    }
+  },
+  "ja": {
+    "nav": {
+      "about": "について",
+      "experience": "経験",
+      "skills": "スキル",
+      "education": "教育",
+      "contact": "お問い合わせ"
+    },
+    "hero": {
+      "greeting": "こんにちは、私は",
+      "statusBadge": "採用可能",
+      "subtitle": "あなたのプロフェッショナルなキャッチフレーズ",
+      "ctaJobFit": "適合性を確認",
+      "ctaChat": "AIに私について尋ねる",
+      "ctaResume": "履歴書をダウンロード"
+    },
+    "about": {
+      "title": "私について",
+      "highlights": "主なハイライト"
+    },
+    "experience": {
+      "title": "職務経験",
+      "present": "現在",
+      "promoted": "昇進元",
+      "location": "場所",
+      "viewMore": "詳細を表示",
+      "viewLess": "詳細を非表示"
+    },
+    "skills": {
+      "title": "スキルと専門知識",
+      "aiAutomation": "AIと自動化",
+      "technical": "技術スキル",
+      "productManagement": "プロダクトマネジメント",
+      "domains": "ドメイン専門知識",
+      "categoryStrong": "主な強み",
+      "categoryModerate": "実務知識",
+      "categoryGaps": "成長分野"
+    },
+    "education": {
+      "title": "教育と認定",
+      "degrees": "学位",
+      "certifications": "認定資格",
+      "languages": "言語",
+      "patents": "特許"
+    },
+    "footer": {
+      "contact": "お問い合わせ",
+      "email": "メール",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "rights": "All rights reserved"
+    },
+    "chat": {
+      "title": "AIアシスタントとチャット",
+      "subtitle": "私の経験について質問してください",
+      "placeholder": "私の経験について質問してください...",
+      "send": "送信",
+      "close": "閉じる",
+      "open": "チャットを開く",
+      "typing": "AIが入力中...",
+      "error": "問題が発生しました。もう一度お試しください。",
+      "errorRetry": "再試行",
+      "welcome": "こんにちは！私は自分の職務経歴に基づいてトレーニングされたAIアシスタントです。私の経験、スキル、キャリアについて何でも質問してください。",
+      "jobFit": {
+        "title": "求人適合性評価",
+        "subtitle": "求人票を貼り付けて評価",
+        "placeholder": "求人票をここに貼り付けてください...",
+        "assess": "適合性を評価",
+        "back": "チャットに戻る",
+        "analyzing": "求人適合性を分析中..."
+      }
+    },
+    "common": {
+      "loading": "読み込み中...",
+      "error": "エラー",
+      "retry": "再試行",
+      "close": "閉じる"
+    }
+  },
+  "ko": {
+    "nav": {
+      "about": "소개",
+      "experience": "경력",
+      "skills": "기술",
+      "education": "학력",
+      "contact": "연락처"
+    },
+    "hero": {
+      "greeting": "안녕하세요, 저는",
+      "statusBadge": "채용 가능",
+      "subtitle": "귀하의 전문 슬로건",
+      "ctaJobFit": "직무 적합성 확인",
+      "ctaChat": "AI에게 나에 대해 물어보기",
+      "ctaResume": "이력서 다운로드"
+    },
+    "about": {
+      "title": "소개",
+      "highlights": "주요 하이라이트"
+    },
+    "experience": {
+      "title": "전문 경력",
+      "present": "현재",
+      "promoted": "승진 전",
+      "location": "위치",
+      "viewMore": "자세히 보기",
+      "viewLess": "숨기기"
+    },
+    "skills": {
+      "title": "기술 및 전문성",
+      "aiAutomation": "AI 및 자동화",
+      "technical": "기술 스킬",
+      "productManagement": "제품 관리",
+      "domains": "도메인 전문성",
+      "categoryStrong": "핵심 강점",
+      "categoryModerate": "실무 지식",
+      "categoryGaps": "성장 영역"
+    },
+    "education": {
+      "title": "학력 및 자격증",
+      "degrees": "학위",
+      "certifications": "자격증",
+      "languages": "언어",
+      "patents": "특허"
+    },
+    "footer": {
+      "contact": "연락하기",
+      "email": "이메일",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "rights": "All rights reserved"
+    },
+    "chat": {
+      "title": "AI 어시스턴트와 채팅",
+      "subtitle": "제 경력에 대해 질문하세요",
+      "placeholder": "제 경력에 대해 질문하세요...",
+      "send": "보내기",
+      "close": "닫기",
+      "open": "채팅 열기",
+      "typing": "AI가 입력 중...",
+      "error": "문제가 발생했습니다. 다시 시도해 주세요.",
+      "errorRetry": "다시 시도",
+      "welcome": "안녕하세요! 저는 제 전문 배경을 기반으로 학습된 AI 어시스턴트입니다. 제 경력, 기술 또는 커리어에 대해 무엇이든 물어보세요.",
+      "jobFit": {
+        "title": "직무 적합성 평가",
+        "subtitle": "직무 설명을 붙여넣어 평가하세요",
+        "placeholder": "직무 설명을 여기에 붙여넣으세요...",
+        "assess": "적합성 평가",
+        "back": "채팅으로 돌아가기",
+        "analyzing": "직무 적합성 분석 중..."
+      }
+    },
+    "common": {
+      "loading": "로딩 중...",
+      "error": "오류",
+      "retry": "다시 시도",
+      "close": "닫기"
+    }
   }
 }
