@@ -1,0 +1,183 @@
+{
+  "personalInfo": {
+    "name": "Sarah Johnson",
+    "title": "Senior Product Manager",
+    "location": "New York, NY",
+    "phone": "+1 212 555 0456",
+    "email": "sarah.johnson@example.com",
+    "linkedin": "https://linkedin.com/in/sarahjohnson",
+    "github": "https://github.com/sarahjohnson",
+    "website": "https://sarahjohnson.com"
+  },
+  "summary": "Senior Product Manager with 6+ years of experience leading B2B SaaS products from ideation to scale. Expert in data-driven decision making, user research, and cross-functional team leadership with a track record of shipping products that drive revenue growth.",
+  "highlights": [
+    "Led product strategy resulting in 300% user growth and $15M ARR",
+    "Launched 4 major features adopted by 80%+ of customer base",
+    "Built and managed roadmaps for products serving 100K+ users"
+  ],
+  "skills": {
+    "product": [
+      "Product Strategy",
+      "Roadmap Planning",
+      "User Research",
+      "A/B Testing",
+      "PRD Writing",
+      "Feature Prioritization"
+    ],
+    "analytics": [
+      "SQL",
+      "Google Analytics",
+      "Mixpanel",
+      "Amplitude",
+      "Data Analysis",
+      "KPI Tracking"
+    ],
+    "design": [
+      "Figma",
+      "User Stories",
+      "Wireframing",
+      "User Flows",
+      "Prototyping"
+    ],
+    "technical": [
+      "API Basics",
+      "Agile/Scrum",
+      "Jira",
+      "Git",
+      "HTML/CSS"
+    ],
+    "leadership": [
+      "Stakeholder Management",
+      "Cross-functional Leadership",
+      "Presentations",
+      "Mentoring",
+      "Negotiation"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Senior Product Manager",
+      "company": "CloudTech Solutions",
+      "location": "New York, NY",
+      "startDate": "March 2021",
+      "endDate": "Present",
+      "current": true,
+      "description": "Leading product strategy for enterprise collaboration platform serving 100K+ users",
+      "achievements": [
+        "Drove 300% user growth by launching mobile app and real-time collaboration features",
+        "Increased monthly recurring revenue by $5M through strategic feature launches",
+        "Led cross-functional team of 15 engineers, designers, and data analysts",
+        "Reduced churn by 25% through data-driven retention initiatives",
+        "Established product analytics framework adopted company-wide"
+      ],
+      "technologies": ["SQL", "Mixpanel", "Figma", "Jira", "Amplitude"]
+    },
+    {
+      "title": "Product Manager",
+      "company": "E-commerce Platform Inc",
+      "location": "New York, NY",
+      "startDate": "August 2018",
+      "endDate": "February 2021",
+      "current": false,
+      "description": "Managed checkout and payments product for e-commerce platform processing $500M+ annually",
+      "achievements": [
+        "Launched one-click checkout increasing conversion rate by 35%",
+        "Built international payments support expanding to 15 new markets",
+        "Partnered with 6 payment providers to reduce transaction fees by 20%",
+        "Conducted 50+ user interviews to inform product roadmap"
+      ],
+      "technologies": ["Google Analytics", "Optimizely", "Stripe API"]
+    },
+    {
+      "title": "Associate Product Manager",
+      "company": "Social Media Startup",
+      "location": "San Francisco, CA",
+      "startDate": "June 2017",
+      "endDate": "July 2018",
+      "current": false,
+      "description": "First PM hire supporting mobile app with 500K+ users",
+      "achievements": [
+        "Designed and shipped push notification system increasing DAU by 40%",
+        "Led A/B testing program resulting in 20% improvement in retention",
+        "Created product analytics dashboard tracking 25+ key metrics"
+      ],
+      "technologies": ["Firebase", "Google Analytics", "Sketch"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Business Administration (MBA)",
+      "institution": "Columbia Business School",
+      "location": "New York, NY",
+      "graduationDate": "May 2017",
+      "honors": "Dean's List",
+      "relevantCourses": [
+        "Product Management",
+        "Data Analytics",
+        "Strategic Marketing",
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "degree": "Bachelor of Science in Economics",
+      "institution": "University of California, Berkeley",
+      "location": "Berkeley, CA",
+      "graduationDate": "May 2014",
+      "honors": "Cum Laude"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified Scrum Product Owner (CSPO)",
+      "issuer": "Scrum Alliance",
+      "date": "January 2020",
+      "credentialId": "CSPO-987654",
+      "url": "https://www.scrumalliance.org/get-certified/product-owner-track/cspo"
+    },
+    {
+      "name": "Product Analytics Certification",
+      "issuer": "Reforge",
+      "date": "June 2021",
+      "url": "https://www.reforge.com"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "proficiency": "Professional Working Proficiency"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Product Management Newsletter",
+      "description": "Weekly newsletter covering product management best practices and industry trends",
+      "role": "Founder & Editor",
+      "technologies": ["Substack", "Mailchimp"],
+      "url": "https://sarahpm.substack.com",
+      "highlights": [
+        "5,000+ subscribers",
+        "Featured in Product Hunt"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Product Leader of the Year",
+      "issuer": "CloudTech Solutions",
+      "date": "2023",
+      "description": "Recognized for driving exceptional product outcomes and team leadership"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Data-Driven Product Decisions: A Practical Guide",
+      "publisher": "Medium",
+      "date": "2022",
+      "url": "https://medium.com/@sarahjohnson/data-driven-product-decisions"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Redirect all routes to index.html for SPA routing
+# This ensures that direct navigation to routes like /about works correctly
+/* /index.html 200

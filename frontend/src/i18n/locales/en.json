@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Alexander Kirillov",
+    "title": "Senior Product Manager",
+    "subtitle": "Building enterprise B2B products with AI and data platforms",
+    "statusBadge": "Open to AI Product Manager roles",
+    "ctaJobFit": "Check Job Fit",
+    "ctaChat": "Ask AI About Me",
+    "ctaResume": "Download Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "highlights": "Key Highlights"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "present": "Present",
+    "promoted": "Promoted from",
+    "location": "Location",
+    "viewMore": "View Details",
+    "viewLess": "Hide Details"
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "aiAutomation": "AI & Automation",
+    "technical": "Technical Skills",
+    "productManagement": "Product Management",
+    "domains": "Domain Expertise",
+    "categoryStrong": "CORE STRENGTHS",
+    "categoryModerate": "WORKING KNOWLEDGE",
+    "categoryGaps": "AREAS FOR GROWTH/GAPS"
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "degrees": "Academic Degrees",
+    "certifications": "Certifications",
+    "languages": "Languages",
+    "patents": "Patents"
+  },
+  "footer": {
+    "contact": "Get in Touch",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "rights": "All rights reserved"
+  },
+  "chat": {
+    "title": "Chat with AI Assistant",
+    "subtitle": "Ask me anything about Alexander's experience",
+    "placeholder": "Ask me about my experience...",
+    "send": "Send",
+    "close": "Close",
+    "open": "Open Chat",
+    "typing": "AI is typing...",
+    "error": "Something went wrong. Please try again.",
+    "errorRetry": "Retry",
+    "welcome": "Hello! I'm an AI assistant trained on Alexander's professional background. Feel free to ask me anything about his experience, skills, or career.",
+    "jobFit": {
+      "title": "Job Fit Assessment",
+      "subtitle": "Paste a job description to assess fit",
+      "placeholder": "Paste the job description here...",
+      "assess": "Assess Fit",
+      "back": "Back to Chat",
+      "analyzing": "Analyzing job fit..."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close"
+  }
+}

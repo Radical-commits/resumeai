@@ -1,0 +1,165 @@
+{
+  "personalInfo": {
+    "name": "Alex Chen",
+    "title": "Senior Software Engineer",
+    "location": "San Francisco, CA",
+    "phone": "+1 415 555 0123",
+    "email": "alex.chen@example.com",
+    "linkedin": "https://linkedin.com/in/alexchen",
+    "github": "https://github.com/alexchen",
+    "website": "https://alexchen.dev"
+  },
+  "summary": "Senior Software Engineer with 8+ years of experience building scalable web applications and distributed systems. Specialized in React, Node.js, and cloud architecture with a track record of leading high-impact projects from concept to production.",
+  "highlights": [
+    "Led migration to microservices architecture serving 10M+ users",
+    "Reduced API response time by 60% through optimization",
+    "Mentored 12+ junior engineers across 3 product teams"
+  ],
+  "skills": {
+    "languages": [
+      "JavaScript/TypeScript",
+      "Python",
+      "Go",
+      "SQL"
+    ],
+    "frontend": [
+      "React",
+      "Next.js",
+      "Vue.js",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Node.js",
+      "Express",
+      "GraphQL",
+      "REST APIs"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Elasticsearch"
+    ],
+    "cloud": [
+      "AWS (EC2, S3, Lambda)",
+      "Docker",
+      "Kubernetes",
+      "CI/CD"
+    ],
+    "tools": [
+      "Git",
+      "Jira",
+      "Datadog",
+      "Terraform"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "TechCorp",
+      "location": "San Francisco, CA",
+      "startDate": "January 2020",
+      "endDate": "Present",
+      "current": true,
+      "description": "Lead engineer for core platform services supporting 10M+ monthly active users",
+      "achievements": [
+        "Architected and implemented microservices migration reducing deployment time by 75%",
+        "Built real-time notification system processing 50K events/minute with 99.9% uptime",
+        "Established engineering best practices adopted across 5 teams",
+        "Reduced infrastructure costs by 40% through optimization and right-sizing"
+      ],
+      "technologies": ["React", "Node.js", "PostgreSQL", "AWS", "Docker", "Kubernetes"]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "StartupXYZ",
+      "location": "San Francisco, CA",
+      "startDate": "June 2017",
+      "endDate": "December 2019",
+      "current": false,
+      "description": "Full-stack engineer building customer-facing web applications",
+      "achievements": [
+        "Developed payment integration processing $2M+ monthly transactions",
+        "Improved page load time by 70% through code splitting and lazy loading",
+        "Built analytics dashboard used daily by 500+ internal users"
+      ],
+      "technologies": ["React", "Node.js", "MongoDB", "AWS"]
+    },
+    {
+      "title": "Junior Software Engineer",
+      "company": "Digital Agency",
+      "location": "Austin, TX",
+      "startDate": "July 2015",
+      "endDate": "May 2017",
+      "current": false,
+      "description": "Developed web applications for enterprise clients",
+      "achievements": [
+        "Built e-commerce platform generating $500K+ revenue in first year",
+        "Implemented responsive designs supporting mobile, tablet, and desktop"
+      ],
+      "technologies": ["JavaScript", "PHP", "MySQL"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University of Texas at Austin",
+      "location": "Austin, TX",
+      "graduationDate": "May 2015",
+      "honors": "Magna Cum Laude",
+      "relevantCourses": [
+        "Data Structures and Algorithms",
+        "Operating Systems",
+        "Database Systems",
+        "Software Engineering"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect - Professional",
+      "issuer": "Amazon Web Services",
+      "date": "March 2023",
+      "credentialId": "AWS-PSA-12345",
+      "url": "https://aws.amazon.com/certification/"
+    },
+    {
+      "name": "Certified Kubernetes Administrator",
+      "issuer": "Cloud Native Computing Foundation",
+      "date": "August 2022",
+      "credentialId": "CKA-54321",
+      "url": "https://www.cncf.io/certification/cka/"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Native"
+    },
+    {
+      "language": "Mandarin",
+      "proficiency": "Professional Working Proficiency"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Open Source Monitoring Tool",
+      "description": "Real-time application monitoring and alerting system",
+      "role": "Core Maintainer",
+      "technologies": ["Go", "React", "TimescaleDB"],
+      "url": "https://github.com/alexchen/monitor",
+      "highlights": [
+        "1,200+ GitHub stars",
+        "Used by 50+ companies in production"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Employee of the Year",
+      "issuer": "TechCorp",
+      "date": "2022",
+      "description": "Recognized for exceptional technical leadership and impact"
+    }
+  ]
+}

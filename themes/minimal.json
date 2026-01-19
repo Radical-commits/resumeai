@@ -1,0 +1,36 @@
+{
+  "name": "Minimal",
+  "description": "Clean black and white theme for maximum readability",
+  "colors": {
+    "primary": "#000000",
+    "primaryHover": "#262626",
+    "accent": "#525252",
+    "background": "#ffffff",
+    "backgroundSecondary": "#f5f5f5",
+    "text": "#000000",
+    "textSecondary": "#737373",
+    "border": "#e5e5e5",
+    "success": "#16a34a",
+    "warning": "#ca8a04",
+    "error": "#dc2626"
+  },
+  "fonts": {
+    "heading": "Helvetica Neue, sans-serif",
+    "body": "system-ui, sans-serif",
+    "mono": "Monaco, monospace"
+  },
+  "spacing": {
+    "containerMaxWidth": "1000px",
+    "sectionPadding": "3rem",
+    "cardPadding": "1.5rem"
+  },
+  "borderRadius": {
+    "small": "0.25rem",
+    "medium": "0.375rem",
+    "large": "0.5rem"
+  },
+  "animations": {
+    "transitionSpeed": "0.15s",
+    "hoverScale": "1.01"
+  }
+}

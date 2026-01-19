@@ -1,0 +1,36 @@
+{
+  "name": "Modern",
+  "description": "Bold blue theme with modern aesthetics, great for innovators",
+  "colors": {
+    "primary": "#3b82f6",
+    "primaryHover": "#2563eb",
+    "accent": "#2563eb",
+    "background": "#0f172a",
+    "backgroundSecondary": "#1e293b",
+    "text": "#f8fafc",
+    "textSecondary": "#94a3b8",
+    "border": "#334155",
+    "success": "#10b981",
+    "warning": "#f59e0b",
+    "error": "#ef4444"
+  },
+  "fonts": {
+    "heading": "Montserrat, sans-serif",
+    "body": "Inter, system-ui, sans-serif",
+    "mono": "JetBrains Mono, monospace"
+  },
+  "spacing": {
+    "containerMaxWidth": "1280px",
+    "sectionPadding": "5rem",
+    "cardPadding": "2.5rem"
+  },
+  "borderRadius": {
+    "small": "0.5rem",
+    "medium": "0.75rem",
+    "large": "1.25rem"
+  },
+  "animations": {
+    "transitionSpeed": "0.2s",
+    "hoverScale": "1.05"
+  }
+}

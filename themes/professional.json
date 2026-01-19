@@ -1,0 +1,36 @@
+{
+  "name": "Professional",
+  "description": "Clean and professional teal theme, perfect for tech professionals",
+  "colors": {
+    "primary": "#14b8a6",
+    "primaryHover": "#0d9488",
+    "accent": "#0d9488",
+    "background": "#0a0a0a",
+    "backgroundSecondary": "#1a1a1a",
+    "text": "#ffffff",
+    "textSecondary": "#a3a3a3",
+    "border": "#262626",
+    "success": "#22c55e",
+    "warning": "#f59e0b",
+    "error": "#ef4444"
+  },
+  "fonts": {
+    "heading": "Playfair Display, serif",
+    "body": "Inter, system-ui, sans-serif",
+    "mono": "Fira Code, monospace"
+  },
+  "spacing": {
+    "containerMaxWidth": "1200px",
+    "sectionPadding": "4rem",
+    "cardPadding": "2rem"
+  },
+  "borderRadius": {
+    "small": "0.375rem",
+    "medium": "0.5rem",
+    "large": "1rem"
+  },
+  "animations": {
+    "transitionSpeed": "0.3s",
+    "hoverScale": "1.02"
+  }
+}

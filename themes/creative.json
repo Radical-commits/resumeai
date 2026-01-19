@@ -1,0 +1,36 @@
+{
+  "name": "Creative",
+  "description": "Vibrant pink theme for creative professionals and designers",
+  "colors": {
+    "primary": "#ec4899",
+    "primaryHover": "#db2777",
+    "accent": "#db2777",
+    "background": "#1e1b4b",
+    "backgroundSecondary": "#312e81",
+    "text": "#faf5ff",
+    "textSecondary": "#c4b5fd",
+    "border": "#4c1d95",
+    "success": "#34d399",
+    "warning": "#fbbf24",
+    "error": "#f87171"
+  },
+  "fonts": {
+    "heading": "Poppins, sans-serif",
+    "body": "Inter, system-ui, sans-serif",
+    "mono": "Source Code Pro, monospace"
+  },
+  "spacing": {
+    "containerMaxWidth": "1200px",
+    "sectionPadding": "4.5rem",
+    "cardPadding": "2rem"
+  },
+  "borderRadius": {
+    "small": "0.5rem",
+    "medium": "1rem",
+    "large": "1.5rem"
+  },
+  "animations": {
+    "transitionSpeed": "0.3s",
+    "hoverScale": "1.08"
+  }
+}

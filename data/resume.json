@@ -1,0 +1,134 @@
+{
+  "personalInfo": {
+    "name": "Your Name",
+    "title": "Your Professional Title",
+    "location": "City, Country",
+    "phone": "+1 234 567 8900",
+    "email": "you@example.com",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "github": "https://github.com/yourusername",
+    "website": "https://yourdomain.com"
+  },
+  "summary": "A brief professional summary highlighting your expertise, years of experience, and key strengths. This should be 2-3 sentences that capture your professional identity and value proposition.",
+  "highlights": [
+    "Key achievement or highlight from your career",
+    "Another significant accomplishment or skill",
+    "A third notable highlight that sets you apart"
+  ],
+  "skills": {
+    "technical": [
+      "Skill 1",
+      "Skill 2",
+      "Skill 3",
+      "Skill 4"
+    ],
+    "frameworks": [
+      "Framework 1",
+      "Framework 2",
+      "Framework 3"
+    ],
+    "tools": [
+      "Tool 1",
+      "Tool 2",
+      "Tool 3"
+    ],
+    "soft": [
+      "Leadership",
+      "Communication",
+      "Problem Solving"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Job Title",
+      "company": "Company Name",
+      "location": "City, Country",
+      "startDate": "January 2020",
+      "endDate": "Present",
+      "current": true,
+      "description": "Brief description of the role and responsibilities",
+      "achievements": [
+        "Key achievement with measurable impact",
+        "Another significant accomplishment",
+        "Technical contribution or improvement"
+      ],
+      "technologies": ["Tech 1", "Tech 2", "Tech 3"]
+    },
+    {
+      "title": "Previous Job Title",
+      "company": "Previous Company",
+      "location": "City, Country",
+      "startDate": "June 2017",
+      "endDate": "December 2019",
+      "current": false,
+      "description": "Brief description of the role",
+      "achievements": [
+        "Achievement from this role",
+        "Another accomplishment"
+      ],
+      "technologies": ["Tech 1", "Tech 2"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University Name",
+      "location": "City, Country",
+      "graduationDate": "May 2017",
+      "honors": "Cum Laude",
+      "relevantCourses": [
+        "Data Structures",
+        "Algorithms",
+        "Software Engineering"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certification Name",
+      "issuer": "Issuing Organization",
+      "date": "January 2023",
+      "credentialId": "ABC123",
+      "url": "https://certification-url.com"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "proficiency": "Professional Working Proficiency"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Name",
+      "description": "Brief description of the project",
+      "role": "Your Role",
+      "technologies": ["Tech 1", "Tech 2"],
+      "url": "https://project-url.com",
+      "highlights": [
+        "Key outcome or achievement",
+        "Technical challenge solved"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award Name",
+      "issuer": "Organization",
+      "date": "2022",
+      "description": "Brief description of the award"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Publication Title",
+      "publisher": "Publisher Name",
+      "date": "2023",
+      "url": "https://publication-url.com"
+    }
+  ]
+}

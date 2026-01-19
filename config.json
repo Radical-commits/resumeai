@@ -1,0 +1,48 @@
+{
+  "site": {
+    "name": "Your Name",
+    "title": "Your Professional Title",
+    "domain": "https://yourdomain.com",
+    "description": "Your professional summary that describes your expertise and experience",
+    "language": "en",
+    "ogImage": "/og-image.png",
+    "favicon": "/favicon.ico"
+  },
+  "contact": {
+    "email": "you@example.com",
+    "phone": "+1 234 567 8900",
+    "location": "City, Country",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "github": "https://github.com/yourusername"
+  },
+  "theme": "professional",
+  "features": {
+    "enableChat": true,
+    "enableJobFit": true,
+    "enableMultilingual": false,
+    "enableResumePDF": false
+  },
+  "branding": {
+    "primaryColor": "#14b8a6",
+    "accentColor": "#0d9488",
+    "backgroundColor": "#0a0a0a",
+    "textColor": "#ffffff",
+    "fontFamily": "Inter, system-ui, sans-serif"
+  },
+  "languages": {
+    "default": "en",
+    "supported": ["en"],
+    "enableLanguageSwitcher": false
+  },
+  "ai": {
+    "provider": "groq",
+    "model": "llama-3.3-70b-versatile",
+    "temperature": 0.7,
+    "maxTokens": 1024
+  },
+  "deployment": {
+    "platform": "render",
+    "autoScale": false,
+    "region": "oregon"
+  }
+}

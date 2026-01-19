@@ -1,0 +1,45 @@
+{
+  "name": "ai-resume-template",
+  "version": "0.1.0",
+  "description": "AI-powered resume website template with chatbot and job fit assessment",
+  "main": "index.js",
+  "scripts": {
+    "setup": "node scripts/setup-cli.js",
+    "validate": "node scripts/validate.js",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "npm run validate && concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "build": "npm run validate && cd frontend && npm run build && cd ../backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "cd backend && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resume",
+    "template",
+    "ai",
+    "chatbot",
+    "portfolio",
+    "react",
+    "typescript",
+    "groq",
+    "llama"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-resume-template"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ai-resume-template/issues"
+  },
+  "homepage": "https://github.com/yourusername/ai-resume-template#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
