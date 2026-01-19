@@ -11,11 +11,12 @@ export const getResumeSummary = async (req: Request, res: Response) => {
     const yearsOfExperience = calculateYearsOfExperience()
 
     // Extract key information for summary
-    const allSkills = [
-      ...resume.skills.aiAndAutomation,
-      ...resume.skills.technical,
-      ...resume.skills.productManagement
-    ]
+    const allSkills: string[] = []
+    for (const category in resume.skills) {
+      if (Array.isArray(resume.skills[category])) {
+        allSkills.push(...resume.skills[category])
+      }
+    }
 
     // Get top 10 most relevant skills
     const keySkills = allSkills.slice(0, 10)
