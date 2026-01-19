@@ -12,11 +12,13 @@ export interface Resume {
 
 export interface PersonalInfo {
   name: string
+  title: string
   location: string
   phone: string
   email: string
   linkedin: string
   github: string
+  website?: string
 }
 
 export interface Skills {
