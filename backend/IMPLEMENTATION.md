@@ -1,7 +1,7 @@
 # Backend Implementation Summary
 
 ## Overview
-Successfully implemented a complete Node.js/Express backend API with Gemini AI integration for Alexander Kirillov's resume website. The backend provides intelligent chat capabilities, job fit assessment, and structured resume data access.
+Successfully implemented a complete Node.js/Express backend API with multi-provider AI integration for the AI resume website template. The backend provides intelligent chat capabilities, job fit assessment, and structured resume data access. Supports multiple AI providers (Groq, OpenAI, Google Gemini, Anthropic) with dynamic configuration.
 
 ## Files Created/Modified
 
@@ -26,13 +26,13 @@ Successfully implemented a complete Node.js/Express backend API with Gemini AI i
 
 ### Services
 
-#### `/src/services/resumeParser.ts` (New)
-- Parses markdown resume into structured JSON format
-- Extracts all resume sections: contact, summary, skills, experience, education, languages, certifications, patents
-- Implements caching to parse resume only once on startup
-- Provides `getResumeContext()` function to generate AI-friendly context string
-- Calculates years of experience automatically
-- Handles complex markdown parsing with robust error handling
+#### `/src/services/resumeParser.ts` (Refactored)
+- Loads resume from `data/resume.json` (single source of truth)
+- Converts JSON resume structure into format expected by backend
+- Implements caching for fast access
+- Provides `getResumeContext()` function to generate AI-friendly context string for prompts
+- Calculates years of experience automatically from work history
+- Robust error handling for missing or malformed data
 
 #### `/src/services/sessionService.ts` (New)
 - In-memory session management using Map
@@ -101,10 +101,7 @@ Successfully implemented a complete Node.js/Express backend API with Gemini AI i
 
 ### Data
 
-#### `/src/data/resume.md` (New)
-- Copy of Alexander Kirillov's resume in markdown format
-- Source for resume parser service
-- Contains all professional information
+The backend loads resume data from `../data/resume.json` in the project root, which serves as the single source of truth for both backend AI and frontend display.
 
 ### Configuration Files
 
@@ -179,20 +176,20 @@ Bash script for testing all API endpoints:
 
 ## Key Features Implemented
 
-### 1. Resume Parser
-- Reads markdown file on server startup
-- Parses into structured JSON format
-- Extracts sections intelligently:
-  - Contact information
+### 1. Resume Loader
+- Reads `data/resume.json` on server startup (single source of truth)
+- Converts JSON structure to backend format
+- Extracts all sections:
+  - Contact information (personalInfo)
   - Professional summary
-  - Skills by category (AI, Technical, Product Management, Domains)
-  - Professional experience with highlights
-  - Education
+  - Skills by category (dynamic categories)
+  - Professional experience with achievements
+  - Education with honors
   - Certifications
   - Languages
-  - Patents
-- Caches parsed data in memory
-- Generates searchable context string for AI
+  - Publications/Projects
+- Caches loaded data in memory
+- Generates searchable context string for AI prompts
 
 ### 2. Session Management
 - Unique session ID generation
@@ -320,10 +317,11 @@ npm start
 ## Notes
 
 - The backend is fully functional and ready for integration with the frontend
-- A valid Gemini API key is required for the AI features to work
+- A valid AI provider API key is required for the AI features to work
 - Session data will be lost on server restart (by design for free tier)
-- The parser handles the specific markdown format of Alexander's resume
-- For different resume formats, the parser may need adjustments
+- The resume loader reads from `data/resume.json` (single source of truth)
+- The system uses dynamic candidate names from `config.json`
+- Resume data structure is flexible and works with any JSON format matching the schema
 
 ## Dependencies Used
 
@@ -357,7 +355,7 @@ npm start
 
 All requirements from the original specification have been implemented:
 
-1. ✅ Resume Parser Service - Reads and parses markdown, extracts sections, caches in memory
+1. ✅ Resume Loader Service - Loads from JSON (single source of truth), converts to backend format, caches in memory
 2. ✅ Gemini Service - API integration, conversation management, bilingual support
 3. ✅ Session Management - In-memory store, auto-cleanup, unique session IDs
 4. ✅ API Routes - All endpoints implemented (chat, assess-fit, resume summary)

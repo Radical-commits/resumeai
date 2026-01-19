@@ -1,10 +1,10 @@
 # AI Resume Backend
 
-Node.js/Express backend API that powers the AI chatbot for Alexander Kirillov's resume website. This backend processes resume data and integrates with Groq's API to provide an interactive career assistant.
+Node.js/Express backend API that powers the AI chatbot for your resume website. This backend processes resume data and integrates with AI providers to provide an interactive career assistant.
 
 ## Features
 
-- Resume parsing from markdown into structured data
+- Resume loading from JSON configuration (single source of truth)
 - AI-powered chatbot using Groq with Llama 3.3 70B Versatile
 - Bilingual support (English and Russian)
 - Job fit assessment based on job descriptions
@@ -35,14 +35,15 @@ backend/
 │   │   ├── chatRoutes.ts        # Chat endpoints
 │   │   └── resumeRoutes.ts      # Resume endpoints
 │   ├── services/        # Business logic
-│   │   ├── geminiService.ts     # Gemini API integration
-│   │   ├── resumeParser.ts      # Markdown resume parser
+│   │   ├── aiService.ts         # Multi-provider AI integration
+│   │   ├── geminiService.ts     # Legacy Gemini service (deprecated)
+│   │   ├── resumeParser.ts      # Resume JSON parser
 │   │   └── sessionService.ts    # Session management
 │   ├── types/           # TypeScript type definitions
 │   │   └── index.ts     # All interface definitions
-│   ├── data/            # Data files
-│   │   └── resume.md    # Resume markdown file
 │   └── index.ts         # Application entry point
+├── ../data/             # Shared data (single source of truth)
+│   └── resume.json      # Resume data used by both backend and frontend
 ├── .env.example         # Environment variables template
 ├── package.json         # Dependencies and scripts
 └── tsconfig.json        # TypeScript configuration
@@ -115,7 +116,7 @@ General chat with AI assistant about the resume.
 **Request:**
 ```json
 {
-  "message": "What experience does Alexander have with AI?",
+  "message": "What experience does Sarah have with product management?",
   "sessionId": "optional-session-id"
 }
 ```
@@ -123,7 +124,7 @@ General chat with AI assistant about the resume.
 **Response:**
 ```json
 {
-  "reply": "Alexander has extensive experience with Agentic AI...",
+  "reply": "Sarah has 8+ years of experience building and scaling B2C SaaS products...",
   "sessionId": "generated-or-provided-session-id"
 }
 ```
@@ -142,7 +143,7 @@ Assess how well the candidate fits a job description.
 **Response:**
 ```json
 {
-  "assessment": "Alexander is an excellent fit for this role...",
+  "assessment": "Sarah is an excellent fit for this role...",
   "fitScore": 9,
   "sessionId": "generated-or-provided-session-id"
 }
@@ -223,10 +224,11 @@ Debug endpoint for session statistics (development only).
 
 ## Key Features Explained
 
-### Resume Parser
-- Parses markdown resume on server startup
+### Resume Loading
+- Loads resume from `data/resume.json` (single source of truth shared with frontend)
 - Caches parsed data in memory for fast access
-- Extracts structured sections: contact, summary, skills, experience, education, languages, certifications, patents
+- Converts JSON to AI-friendly text context for prompts
+- Extracts structured sections: contact, summary, skills, experience, education, languages, certifications
 
 ### Session Management
 - Generates unique session IDs for each conversation

@@ -25,7 +25,7 @@ echo ""
 echo "3. Testing chat endpoint..."
 curl -s -X POST "$BASE_URL/api/chat" \
   -H "Content-Type: application/json" \
-  -d '{"message": "What experience does Alexander have with AI?"}' | jq '.'
+  -d '{"message": "What experience does Sarah have with product management?"}' | jq '.'
 echo ""
 echo ""
 
@@ -54,5 +54,5 @@ echo ""
 echo "=============================="
 echo "Tests completed!"
 echo ""
-echo "Note: Chat and assessment tests may fail if GEMINI_API_KEY is not set correctly."
+echo "Note: Chat and assessment tests may fail if AI_API_KEY is not set correctly."
 echo "This is expected. The important thing is that the server responds with proper error messages."
