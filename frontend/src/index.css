@@ -89,13 +89,14 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
   min-width: 320px;
