@@ -188,7 +188,7 @@ async function setupWizard() {
         anthropic: 'Anthropic'
       };
       log(`⚠️  Remember to add your ${providerNames[answers.aiProvider]} API key to backend/.env`, 'yellow');
-      log(`   See .env.example for configuration details\n`, 'yellow');
+      log(`   See backend/.env.example for configuration details\n`, 'yellow');
     }
 
   } catch (error) {

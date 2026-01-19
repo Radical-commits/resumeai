@@ -110,10 +110,12 @@ Successfully implemented a complete Node.js/Express backend API with Gemini AI i
 
 #### `.env.example` (Updated)
 Complete environment variable template:
+- AI_API_KEY=your_api_key_here (generic, works for all providers)
+- AI_PROVIDER=groq (or openai, google, anthropic)
+- AI_MODEL=llama-3.3-70b-versatile
 - PORT=3001
 - NODE_ENV=development
 - CORS_ORIGIN=http://localhost:5173
-- GROQ_API_KEY=your_gemini_api_key_here
 
 #### `.env` (Created)
 Working environment file for development
@@ -199,8 +201,10 @@ Bash script for testing all API endpoints:
 - In-memory storage (suitable for free tier)
 - Session statistics for monitoring
 
-### 3. Gemini Integration
-- Uses Gemini 1.5 Flash model
+### 3. AI Integration
+- Multi-provider support via abstraction layer (Groq, OpenAI, Google Gemini, Anthropic)
+- Generic `AI_API_KEY` configuration for easy provider switching
+- Provider-specific keys supported as fallback
 - Bilingual support (English/Russian)
 - System prompts optimized for two modes:
   - General career assistant

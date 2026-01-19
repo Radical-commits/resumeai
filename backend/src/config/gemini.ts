@@ -1,13 +1,22 @@
+/**
+ * @deprecated This file is legacy code and should not be used.
+ * Use services/aiService.ts instead, which supports multiple AI providers
+ * with generic AI_API_KEY configuration.
+ *
+ * This file will be removed in a future version.
+ */
+
 import OpenAI from 'openai'
 import dotenv from 'dotenv'
 
 dotenv.config()
 
-// Support both GROQ_API_KEY and legacy GEMINI_API_KEY
-const API_KEY = process.env.GROQ_API_KEY || process.env.GEMINI_API_KEY
+// DEPRECATED: Use AI_API_KEY in aiService.ts instead
+const API_KEY = process.env.AI_API_KEY || process.env.GROQ_API_KEY || process.env.GEMINI_API_KEY
 
 if (!API_KEY) {
-  throw new Error('GROQ_API_KEY is not defined in environment variables')
+  console.warn('[DEPRECATED] config/gemini.ts: Use aiService.ts instead')
+  throw new Error('AI_API_KEY or GROQ_API_KEY is not defined in environment variables')
 }
 
 // Configure OpenAI client to use Groq endpoint

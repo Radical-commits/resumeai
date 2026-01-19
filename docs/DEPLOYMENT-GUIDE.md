@@ -388,21 +388,16 @@ docker-compose down
 ### Backend (.env)
 
 ```bash
-# AI Provider (choose one)
-# Groq (Reference Implementation)
-GROQ_API_KEY=your_groq_api_key
-AI_PROVIDER=groq
+# AI Provider Configuration (Recommended: Use generic AI_API_KEY)
+AI_API_KEY=your_api_key_here
+AI_PROVIDER=groq  # or openai, google, anthropic
 AI_MODEL=llama-3.3-70b-versatile
 
-# Or OpenAI
+# Alternative: Provider-specific keys (for backward compatibility)
+# GROQ_API_KEY=your_groq_api_key
 # OPENAI_API_KEY=your_openai_key
-# AI_PROVIDER=openai
-# AI_MODEL=gpt-4-turbo-preview
-
-# Or Anthropic
+# GOOGLE_API_KEY=your_google_key
 # ANTHROPIC_API_KEY=your_anthropic_key
-# AI_PROVIDER=anthropic
-# AI_MODEL=claude-3-sonnet-20240229
 
 # Server Configuration
 PORT=3001

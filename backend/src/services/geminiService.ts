@@ -1,3 +1,12 @@
+/**
+ * @deprecated This file is legacy code and should not be used.
+ * Use services/aiService.ts instead, which provides a cleaner abstraction
+ * for multiple AI providers with proper configuration management.
+ *
+ * This file depends on the deprecated config/gemini.ts and will be removed
+ * in a future version.
+ */
+
 import { openaiClient, MODEL_NAME, SYSTEM_PROMPTS } from '../config/gemini.js'
 import { getResumeContext } from './resumeParser.js'
 import type { ChatMessage } from '../types/index.js'
@@ -62,7 +71,7 @@ export async function generateChatResponse(
 
     // Check for rate limiting
     if (error instanceof Error && error.message.includes('429')) {
-      console.warn('Rate limit reached for Gemini API')
+      console.warn('[DEPRECATED] geminiService.ts: Rate limit reached for AI provider')
       throw new Error('API rate limit reached. Please try again later.')
     }
 
@@ -118,7 +127,7 @@ export async function assessJobFit(
     console.error('Error assessing job fit:', error)
 
     if (error instanceof Error && error.message.includes('429')) {
-      console.warn('Rate limit reached for Gemini API')
+      console.warn('[DEPRECATED] geminiService.ts: Rate limit reached for AI provider')
       throw new Error('API rate limit reached. Please try again later.')
     }
 

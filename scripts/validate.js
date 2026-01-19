@@ -162,8 +162,17 @@ function validateConfig() {
 
   if (fs.existsSync(backendEnvPath)) {
     const envContent = fs.readFileSync(backendEnvPath, 'utf8');
-    if (!envContent.includes('GROQ_API_KEY=') || envContent.includes('GROQ_API_KEY=your-')) {
-      warnings.push('GROQ_API_KEY not configured in backend/.env');
+
+    // Check for AI_API_KEY (generic) or any provider-specific key
+    const hasGenericKey = envContent.includes('AI_API_KEY=') && !envContent.includes('AI_API_KEY=your-');
+    const hasProviderKey =
+      (envContent.includes('GROQ_API_KEY=') && !envContent.includes('GROQ_API_KEY=your-')) ||
+      (envContent.includes('OPENAI_API_KEY=') && !envContent.includes('OPENAI_API_KEY=sk-your-')) ||
+      (envContent.includes('GOOGLE_API_KEY=') && !envContent.includes('GOOGLE_API_KEY=your-')) ||
+      (envContent.includes('ANTHROPIC_API_KEY=') && !envContent.includes('ANTHROPIC_API_KEY=sk-ant-'));
+
+    if (!hasGenericKey && !hasProviderKey) {
+      warnings.push('AI_API_KEY (or provider-specific key) not configured in backend/.env');
     }
   } else {
     warnings.push('backend/.env file not found');

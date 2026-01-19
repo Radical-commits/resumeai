@@ -53,7 +53,11 @@ backend/
 ### Prerequisites
 
 - Node.js 18+ and npm
-- Groq API key (get from [Groq Console](https://console.groq.com/keys))
+- AI provider API key (choose one):
+  - [Groq](https://console.groq.com/keys) - Free, fast (recommended)
+  - [OpenAI](https://platform.openai.com) - High quality, $5 credit
+  - [Google Gemini](https://makersuite.google.com/app/apikey) - Free tier
+  - [Anthropic](https://console.anthropic.com) - Premium quality
 
 ### Installation
 
@@ -64,12 +68,21 @@ npm install
 
 2. Create environment file:
 ```bash
-cp .env.example .env
+cp backend/.env.example backend/.env
 ```
 
-3. Add your Groq API key to `.env`:
-```
-GROQ_API_KEY=your_actual_groq_api_key_here
+3. Add your AI provider API key to `backend/.env`:
+```bash
+# Generic API key (works for all providers)
+AI_API_KEY=your_api_key_here
+AI_PROVIDER=groq  # or openai, google, anthropic
+AI_MODEL=llama-3.3-70b-versatile
+
+# Alternatively, use provider-specific keys:
+# GROQ_API_KEY=gsk_your_groq_key_here
+# OPENAI_API_KEY=sk-your_openai_key_here
+# GOOGLE_API_KEY=your_google_key_here
+# ANTHROPIC_API_KEY=sk-ant-your_anthropic_key_here
 ```
 
 4. Build the project:
@@ -200,7 +213,13 @@ Debug endpoint for session statistics (development only).
 | `PORT` | Server port | 3001 |
 | `NODE_ENV` | Environment (development/production) | development |
 | `CORS_ORIGIN` | Allowed CORS origin | http://localhost:5173 |
-| `GROQ_API_KEY` | Groq API key | (required) |
+| `AI_API_KEY` | Generic AI provider API key (recommended) | (required) |
+| `AI_PROVIDER` | AI provider (groq/openai/google/anthropic) | groq |
+| `AI_MODEL` | Model to use | llama-3.3-70b-versatile |
+| `GROQ_API_KEY` | Groq-specific API key (fallback) | - |
+| `OPENAI_API_KEY` | OpenAI-specific API key (fallback) | - |
+| `GOOGLE_API_KEY` | Google-specific API key (fallback) | - |
+| `ANTHROPIC_API_KEY` | Anthropic-specific API key (fallback) | - |
 
 ## Key Features Explained
 
@@ -215,11 +234,13 @@ Debug endpoint for session statistics (development only).
 - Automatic cleanup of sessions older than 24 hours
 - In-memory storage (suitable for free tier deployment)
 
-### Gemini Integration
-- Uses Gemini 1.5 Flash model (fast and cost-effective)
+### AI Integration
+- Multi-provider support: Groq, OpenAI, Google Gemini, Anthropic
+- Uses provider-agnostic abstraction layer (`aiService.ts`)
 - Bilingual support: automatically detects language and responds accordingly
 - System prompts optimized for career assistant and job assessment roles
 - Rate limiting awareness with graceful error handling
+- Generic `AI_API_KEY` configuration for easy provider switching
 
 ### Bilingual Support
 The AI automatically detects the language of the user's message and responds in the same language:
