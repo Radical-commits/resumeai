@@ -31,8 +31,8 @@
   },
   "languages": {
     "default": "en",
-    "supported": ["en"],
-    "enableLanguageSwitcher": false
+    "supported": ["en","de"],
+    "enableLanguageSwitcher": true
   },
   "ai": {
     "provider": "groq",
