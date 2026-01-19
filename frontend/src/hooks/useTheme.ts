@@ -79,6 +79,26 @@ export const useTheme = () => {
         root.style.setProperty('--radius-md', themeData.borderRadius.medium)
         root.style.setProperty('--radius-lg', themeData.borderRadius.large)
 
+        // Apply branding overrides from config if present
+        if (config.branding) {
+          if (config.branding.primaryColor) {
+            root.style.setProperty('--color-primary', config.branding.primaryColor)
+          }
+          if (config.branding.accentColor) {
+            root.style.setProperty('--color-primary-dark', config.branding.accentColor)
+            root.style.setProperty('--color-primary-light', config.branding.accentColor)
+          }
+          if (config.branding.backgroundColor) {
+            root.style.setProperty('--color-bg-primary', config.branding.backgroundColor)
+          }
+          if (config.branding.textColor) {
+            root.style.setProperty('--color-text-primary', config.branding.textColor)
+          }
+          if (config.branding.fontFamily) {
+            root.style.setProperty('--font-sans', config.branding.fontFamily)
+          }
+        }
+
         console.log(`✓ Loaded theme: ${themeData.name}`)
       } catch (error) {
         console.warn('Failed to load theme, using defaults:', error)

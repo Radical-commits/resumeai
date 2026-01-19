@@ -107,7 +107,9 @@ ai-resume-template/
 
 ### User Guides
 - **[Setup Guide](docs/SETUP-GUIDE.md)** - Complete setup instructions
+- **[Configuration Reference](docs/CONFIG-REFERENCE.md)** - All config.json options explained
 - **[Customization Guide](docs/CUSTOMIZATION.md)** - How to customize everything
+- **[Multilingual Setup](docs/MULTILINGUAL-SETUP.md)** - Add multiple languages
 - **[AI Providers Guide](docs/AI-PROVIDERS.md)** - Compare and configure AI providers
 - **[Deployment Guide](docs/DEPLOYMENT-GUIDE.md)** - Deploy to various platforms
 - **[Theme Guide](themes/README.md)** - Working with themes
