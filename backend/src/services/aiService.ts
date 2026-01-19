@@ -64,9 +64,10 @@ class AIService {
   }
 
   private initGroq() {
-    const apiKey = process.env.GROQ_API_KEY
+    // Use generic AI_API_KEY or fall back to provider-specific key
+    const apiKey = process.env.AI_API_KEY || process.env.GROQ_API_KEY
     if (!apiKey) {
-      throw new Error('GROQ_API_KEY is not defined in environment variables')
+      throw new Error('AI_API_KEY or GROQ_API_KEY is not defined in environment variables')
     }
 
     this.client = new OpenAI({
@@ -76,9 +77,10 @@ class AIService {
   }
 
   private initOpenAI() {
-    const apiKey = process.env.OPENAI_API_KEY
+    // Use generic AI_API_KEY or fall back to provider-specific key
+    const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY
     if (!apiKey) {
-      throw new Error('OPENAI_API_KEY is not defined in environment variables')
+      throw new Error('AI_API_KEY or OPENAI_API_KEY is not defined in environment variables')
     }
 
     this.client = new OpenAI({
@@ -87,9 +89,10 @@ class AIService {
   }
 
   private initGoogle() {
-    const apiKey = process.env.GOOGLE_API_KEY
+    // Use generic AI_API_KEY or fall back to provider-specific key
+    const apiKey = process.env.AI_API_KEY || process.env.GOOGLE_API_KEY
     if (!apiKey) {
-      throw new Error('GOOGLE_API_KEY is not defined in environment variables')
+      throw new Error('AI_API_KEY or GOOGLE_API_KEY is not defined in environment variables')
     }
 
     // For Google Gemini, we'll use OpenAI-compatible wrapper
@@ -100,9 +103,10 @@ class AIService {
   }
 
   private initAnthropic() {
-    const apiKey = process.env.ANTHROPIC_API_KEY
+    // Use generic AI_API_KEY or fall back to provider-specific key
+    const apiKey = process.env.AI_API_KEY || process.env.ANTHROPIC_API_KEY
     if (!apiKey) {
-      throw new Error('ANTHROPIC_API_KEY is not defined in environment variables')
+      throw new Error('AI_API_KEY or ANTHROPIC_API_KEY is not defined in environment variables')
     }
 
     // For Anthropic, we'll need to use their SDK or API directly

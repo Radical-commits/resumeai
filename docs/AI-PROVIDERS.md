@@ -15,6 +15,17 @@ Complete guide for choosing and configuring AI providers for your resume chatbot
 9. [Cost Optimization](#cost-optimization)
 10. [Switching Providers](#switching-providers)
 
+## API Key Configuration
+
+**Simplified Setup:** This template uses a generic `AI_API_KEY` environment variable that works with all providers. Set it in `backend/.env`:
+
+```bash
+AI_API_KEY=your_api_key_here
+AI_PROVIDER=groq  # or openai, google, anthropic
+```
+
+Provider-specific keys (e.g., `GROQ_API_KEY`, `OPENAI_API_KEY`) are also supported for backward compatibility or when managing multiple providers simultaneously.
+
 ## Provider Comparison
 
 | Provider | Free Tier | Cost | Speed | Quality | Best For |
@@ -69,9 +80,13 @@ In `config.json`:
 
 In `backend/.env`:
 ```bash
-GROQ_API_KEY=gsk_your_api_key_here
+# Generic API key (works for all providers)
+AI_API_KEY=gsk_your_api_key_here
 AI_PROVIDER=groq
 AI_MODEL=llama-3.3-70b-versatile
+
+# Alternatively, use provider-specific key:
+# GROQ_API_KEY=gsk_your_api_key_here
 ```
 
 ### Available Models
@@ -130,9 +145,13 @@ In `config.json`:
 
 In `backend/.env`:
 ```bash
-OPENAI_API_KEY=sk-your_api_key_here
+# Generic API key (works for all providers)
+AI_API_KEY=sk-your_api_key_here
 AI_PROVIDER=openai
 AI_MODEL=gpt-4o-mini
+
+# Alternatively, use provider-specific key:
+# OPENAI_API_KEY=sk-your_api_key_here
 ```
 
 ### Recommended Models
@@ -193,9 +212,13 @@ In `config.json`:
 
 In `backend/.env`:
 ```bash
-ANTHROPIC_API_KEY=sk-ant-your_api_key_here
+# Generic API key (works for all providers)
+AI_API_KEY=sk-ant-your_api_key_here
 AI_PROVIDER=anthropic
 AI_MODEL=claude-3-5-sonnet-20241022
+
+# Alternatively, use provider-specific key:
+# ANTHROPIC_API_KEY=sk-ant-your_api_key_here
 ```
 
 ### Recommended Models
@@ -253,9 +276,13 @@ In `config.json`:
 
 In `backend/.env`:
 ```bash
-GOOGLE_API_KEY=your_api_key_here
+# Generic API key (works for all providers)
+AI_API_KEY=your_api_key_here
 AI_PROVIDER=google
 AI_MODEL=gemini-1.5-flash
+
+# Alternatively, use provider-specific key:
+# GOOGLE_API_KEY=your_api_key_here
 ```
 
 ### Recommended Models

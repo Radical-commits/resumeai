@@ -151,8 +151,14 @@ Edit `data/resume.json` with your information. See [Resume Data Structure](#resu
 Create `backend/.env`:
 
 ```env
-# AI Service Configuration
-GROQ_API_KEY=your_groq_api_key_here
+# AI Service Configuration (works for all providers)
+AI_API_KEY=your_api_key_here
+
+# Alternative: Use provider-specific keys
+# GROQ_API_KEY=your_groq_api_key_here
+# OPENAI_API_KEY=your_openai_api_key_here
+# GOOGLE_API_KEY=your_google_api_key_here
+# ANTHROPIC_API_KEY=your_anthropic_api_key_here
 
 # Server Configuration
 PORT=3001

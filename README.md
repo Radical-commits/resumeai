@@ -159,8 +159,10 @@ See `examples/software-engineer.json` for a complete example.
 Customize UI labels and messages, with support for multiple languages.
 
 ### `.env` Files - API Keys
-- `backend/.env` - Groq API key and server configuration
+- `backend/.env` - AI provider API key (`AI_API_KEY`) and server configuration
 - `frontend/.env` - API URL and frontend settings
+
+**Note:** Use the generic `AI_API_KEY` variable for all providers. Provider-specific keys (e.g., `GROQ_API_KEY`, `OPENAI_API_KEY`) are also supported for backward compatibility.
 
 ## Themes
 
