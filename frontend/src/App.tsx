@@ -8,10 +8,14 @@ import { Education } from './components/Education'
 import { Footer } from './components/Footer'
 import { ChatContainer } from './components/Chat/ChatContainer'
 import { getSiteConfig, getResumeData } from './config/loader'
+import { useTheme } from './hooks/useTheme'
 
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false)
   const [chatInitialView, setChatInitialView] = useState<'chat' | 'jobFit'>('chat')
+
+  // Load and apply theme from configuration
+  useTheme()
 
   // Update document title and meta tags based on configuration
   useEffect(() => {
