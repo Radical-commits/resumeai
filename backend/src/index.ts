@@ -90,12 +90,14 @@ if (NODE_ENV !== 'production') {
 
 // Serve static files from frontend build in production
 if (NODE_ENV === 'production') {
-  const frontendPath = path.join(__dirname, '../../frontend/dist')
+  const frontendPath = path.join(__dirname, 'public')
+  console.log('Serving frontend from:', frontendPath)
 
   // Serve static assets with caching
   app.use(express.static(frontendPath, {
     maxAge: '1d',
-    etag: true
+    etag: true,
+    index: false // Don't automatically serve index.html for directories
   }))
 
   // Serve index.html for all non-API routes (SPA routing)
@@ -107,7 +109,12 @@ if (NODE_ENV === 'production') {
         path: req.path
       })
     }
-    res.sendFile(path.join(frontendPath, 'index.html'))
+    res.sendFile(path.join(frontendPath, 'index.html'), (err) => {
+      if (err) {
+        console.error('Error sending index.html:', err)
+        res.status(500).json({ error: 'Failed to load application' })
+      }
+    })
   })
 } else {
   // 404 handler for development (when running separately)

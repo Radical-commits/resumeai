@@ -11,4 +11,8 @@ echo "Building frontend..."
 echo "Building backend..."
 (cd backend && npm install --legacy-peer-deps && npm run build)
 
+echo "Copying frontend build to backend..."
+mkdir -p backend/dist/public
+cp -r frontend/dist/* backend/dist/public/
+
 echo "Build complete!"
