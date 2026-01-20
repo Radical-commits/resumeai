@@ -5,7 +5,7 @@
 
 import OpenAI from 'openai'
 import dotenv from 'dotenv'
-import { getAIConfig, getSiteInfo } from '../config/loader'
+import { getAIConfig, getSiteInfo } from '../config/loader.js'
 
 dotenv.config()
 
