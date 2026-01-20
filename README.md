@@ -1,4 +1,4 @@
-# AI Resume Website Template
+# ResumeAI
 
 > Transform your professional experience into an AI-powered resume website
 
@@ -40,8 +40,8 @@ This project provides a complete template for creating your own AI-powered resum
 
 1. **Clone or download this template**
 ```bash
-git clone https://github.com/yourusername/ai-resume-template
-cd ai-resume-template
+git clone https://github.com/yourusername/resumeai
+cd resumeai
 ```
 
 2. **Run the setup wizard**
@@ -92,14 +92,14 @@ cp data/resume.json.example data/resume.json
 ## Project Structure
 
 ```
-ai-resume-template/
+resumeai/
 ├── plans/                  # Implementation plans and documentation
 ├── docs/                   # User guides and documentation
 ├── examples/               # Example configurations
 ├── themes/                 # Pre-built theme configurations
 ├── scripts/                # Setup wizards and utilities
-├── frontend/               # React + Vite application (coming soon)
-├── backend/                # Express + AI service (coming soon)
+├── frontend/               # React + Vite application
+├── backend/                # Express + AI service
 └── README.md
 ```
 

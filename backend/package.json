@@ -1,7 +1,7 @@
 {
-  "name": "ai-resume-backend",
+  "name": "resumeai-backend",
   "version": "1.0.0",
-  "description": "Backend API for AI-powered resume website",
+  "description": "Backend API for ResumeAI - AI-powered resume website",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {

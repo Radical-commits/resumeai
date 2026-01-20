@@ -17,8 +17,8 @@ Get your AI-powered resume website running in 5 minutes. No technical knowledge 
 
 ### Option B: Use Git (If you know how)
 ```bash
-git clone https://github.com/yourusername/ai-resume-template
-cd ai-resume-template
+git clone https://github.com/yourusername/resumeai
+cd resumeai
 ```
 
 ## Step 2: Install Node.js
@@ -42,7 +42,7 @@ You should see something like `v20.10.0` or `v18.19.0`.
 In Terminal or Command Prompt, navigate to your project folder:
 
 ```bash
-cd path/to/ai-resume-template
+cd path/to/resumeai
 npm install
 ```
 

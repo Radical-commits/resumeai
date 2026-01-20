@@ -1,7 +1,7 @@
 {
-  "name": "ai-resume-template",
+  "name": "resumeai",
   "version": "0.1.0",
-  "description": "AI-powered resume website template with chatbot and job fit assessment",
+  "description": "ResumeAI - AI-powered resume website with chatbot and job fit assessment",
   "main": "index.js",
   "scripts": {
     "setup": "node scripts/setup-cli.js",
@@ -29,12 +29,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/ai-resume-template"
+    "url": "https://github.com/yourusername/resumeai"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/ai-resume-template/issues"
+    "url": "https://github.com/yourusername/resumeai/issues"
   },
-  "homepage": "https://github.com/yourusername/ai-resume-template#readme",
+  "homepage": "https://github.com/yourusername/resumeai#readme",
   "devDependencies": {
     "concurrently": "^8.2.2"
   },
