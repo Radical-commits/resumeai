@@ -40,7 +40,7 @@ This project provides a complete template for creating your own AI-powered resum
 
 1. **Clone or download this template**
 ```bash
-git clone https://github.com/yourusername/resumeai
+git clone https://github.com/Radical-commits/resumeai.git
 cd resumeai
 ```
 

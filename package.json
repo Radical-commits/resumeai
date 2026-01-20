@@ -29,12 +29,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/resumeai"
+    "url": "https://github.com/Radical-commits/resumeai.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/resumeai/issues"
+    "url": "https://github.com/Radical-commits/resumeai/issues"
   },
-  "homepage": "https://github.com/yourusername/resumeai#readme",
+  "homepage": "https://github.com/Radical-commits/resumeai#readme",
   "devDependencies": {
     "concurrently": "^8.2.2"
   },

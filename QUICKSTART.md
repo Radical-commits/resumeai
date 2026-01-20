@@ -17,7 +17,7 @@ Get your AI-powered resume website running in 5 minutes. No technical knowledge 
 
 ### Option B: Use Git (If you know how)
 ```bash
-git clone https://github.com/yourusername/resumeai
+git clone https://github.com/Radical-commits/resumeai.git
 cd resumeai
 ```
 
