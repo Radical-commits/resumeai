@@ -1,0 +1,37 @@
+services:
+  # Backend API Service
+  - type: web
+    name: resumeai-backend
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: AI_API_KEY
+        sync: false  # This will need to be set in Render dashboard
+      - key: FRONTEND_URL
+        sync: false  # Set to your frontend URL after deployment
+    healthCheckPath: /health
+
+  # Frontend Static Site
+  - type: web
+    name: resumeai-frontend
+    runtime: static
+    region: oregon
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_API_URL
+        sync: false  # Set to your backend URL after deployment
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

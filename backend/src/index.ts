@@ -5,10 +5,15 @@ import helmet from 'helmet'
 import rateLimit from 'express-rate-limit'
 import morgan from 'morgan'
 import compression from 'compression'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import chatRoutes from './routes/chatRoutes.js'
 import resumeRoutes from './routes/resumeRoutes.js'
 import { startSessionCleanup, getSessionStats } from './services/sessionService.js'
 import { parseResume } from './services/resumeParser.js'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 dotenv.config()
 
@@ -83,13 +88,36 @@ if (NODE_ENV !== 'production') {
   })
 }
 
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({
-    error: 'Not found',
-    path: req.path
+// Serve static files from frontend build in production
+if (NODE_ENV === 'production') {
+  const frontendPath = path.join(__dirname, '../../frontend/dist')
+
+  // Serve static assets with caching
+  app.use(express.static(frontendPath, {
+    maxAge: '1d',
+    etag: true
+  }))
+
+  // Serve index.html for all non-API routes (SPA routing)
+  app.get('*', (req, res) => {
+    // Don't serve index.html for API routes
+    if (req.path.startsWith('/api') || req.path === '/health') {
+      return res.status(404).json({
+        error: 'Not found',
+        path: req.path
+      })
+    }
+    res.sendFile(path.join(frontendPath, 'index.html'))
   })
-})
+} else {
+  // 404 handler for development (when running separately)
+  app.use((req, res) => {
+    res.status(404).json({
+      error: 'Not found',
+      path: req.path
+    })
+  })
+}
 
 // Global error handler
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
