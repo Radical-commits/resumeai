@@ -186,7 +186,7 @@ Now that it's working, you can customize it:
 
 1. **Change the look** - See [CUSTOMIZATION.md](docs/CUSTOMIZATION.md) to pick a theme and change colors
 2. **Add your photo** - Put `profile.jpg` in `frontend/public/`
-3. **Deploy online** - See [ADVANCED.md](docs/ADVANCED.md#deployment) to put it on the internet
+3. **Deploy online** - See [DEPLOYMENT.md](docs/DEPLOYMENT.md) to put it on the internet
 
 ## Need Help?
 

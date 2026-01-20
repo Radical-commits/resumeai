@@ -380,138 +380,32 @@ OLLAMA_BASE_URL=http://localhost:11434
 
 ---
 
-## Deployment Options
+## Deployment
 
-Host your resume website online.
+Ready to put your resume website online? See the **[Deployment Guide](DEPLOYMENT.md)** for complete instructions.
 
-### Render.com (Recommended)
+**Supported platforms:**
+- **Render.com** (recommended) - Free tier, easy setup, full-stack support
+- **Vercel** - Fast CDN, great for static sites
+- **Netlify** - Static sites with serverless functions
+- **Railway** - Simple containerized deployment
+- **Self-hosted** - VPS deployment with full control
 
-**Why Render:**
-- Free tier available
-- Automatic deployments from GitHub
-- Built-in SSL certificates
-- Easy setup
+The deployment guide includes:
+- Step-by-step instructions for each platform
+- Environment variable setup
+- Troubleshooting common issues
+- Custom domain configuration
+- Single-service vs. separate deployments
 
-**Steps:**
+**Quick Start (Render.com):**
+1. Push your code to GitHub
+2. Create Web Service on Render
+3. Set build command: `npm run build:prod`
+4. Set start command: `npm start`
+5. Add environment variable: `AI_API_KEY=your_key`
 
-1. **Prepare your code:**
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-2. **Push to GitHub:**
-   - Create repository on GitHub
-   - Push your code
-
-3. **Deploy on Render:**
-   - Go to https://render.com
-   - Sign up with GitHub
-   - Click "New +" → "Web Service"
-   - Select your repository
-   - Configure:
-     - **Name:** your-resume-site
-     - **Build Command:** `cd frontend && npm install && npm run build && cd ../backend && npm install && npm run build`
-     - **Start Command:** `cd backend && npm start`
-     - **Environment Variables:** Add `AI_API_KEY`
-
-4. **Your site is live!**
-   - URL: `https://your-resume-site.onrender.com`
-   - Auto-deploys on git push
-
-**Cost:** Free tier available (sleeps after inactivity)
-
-### Vercel (Frontend Only)
-
-**Why Vercel:**
-- Best for static sites
-- Ultra-fast CDN
-- Free SSL
-- Free tier
-
-**Setup:**
-
-1. Build frontend:
-```bash
-cd frontend
-npm run build
-```
-
-2. Deploy:
-```bash
-npm install -g vercel
-vercel
-```
-
-3. Follow prompts
-
-**Note:** Requires separate backend hosting for AI features.
-
-**Cost:** Free for personal projects
-
-### Netlify
-
-Similar to Vercel. Good for static sites + serverless functions.
-
-**Steps:**
-1. Connect GitHub repository
-2. Configure build: `cd frontend && npm run build`
-3. Publish directory: `frontend/dist`
-
-**Cost:** Free tier available
-
-### Railway
-
-**Why Railway:**
-- Easy full-stack deployment
-- Free trial credits
-- Simple configuration
-
-**Steps:**
-1. Go to https://railway.app
-2. "New Project" → "Deploy from GitHub"
-3. Select repository
-4. Add environment variables
-5. Deploy
-
-**Cost:** $5/month minimum after trial
-
-### VPS / Self-Hosted
-
-For complete control, deploy to any Linux server:
-
-```bash
-# Install Node.js
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Clone and build
-git clone your-repo.git
-cd your-repo
-npm install
-
-# Start with PM2 (process manager)
-npm install -g pm2
-cd backend && pm2 start npm --name "resume-backend" -- start
-cd frontend && pm2 start npm --name "resume-frontend" -- start
-```
-
-**Setup nginx reverse proxy:**
-```nginx
-server {
-    listen 80;
-    server_name yourdomain.com;
-
-    location / {
-        proxy_pass http://localhost:5173;
-    }
-
-    location /api {
-        proxy_pass http://localhost:3001;
-    }
-}
-```
+See [DEPLOYMENT.md](DEPLOYMENT.md) for full details.
 
 ---
 

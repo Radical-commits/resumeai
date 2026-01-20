@@ -81,7 +81,8 @@ Visit http://localhost:5173 to see your resume!
 ### Getting Started
 1. **[Quick Start Guide](QUICKSTART.md)** ⭐ - Detailed 5-minute setup (start here!)
 2. **[Customization Guide](docs/CUSTOMIZATION.md)** - Make it yours (colors, theme, content)
-3. **[Advanced Guide](docs/ADVANCED.md)** - Complete reference (config, AI providers, deployment, languages)
+3. **[Deployment Guide](docs/DEPLOYMENT.md)** - Deploy to Render, Vercel, Netlify, or self-host
+4. **[Advanced Guide](docs/ADVANCED.md)** - Complete reference (config, AI providers, languages)
 
 ## Project Structure
 
@@ -179,7 +180,7 @@ Deploy to your preferred platform:
 
 ⭐ **Recommended:** Start with **Render.com**
 
-See the [Advanced Guide](docs/ADVANCED.md#deployment-options) for platform-specific instructions.
+See the [Deployment Guide](docs/DEPLOYMENT.md) for platform-specific instructions.
 
 ## Tech Stack
 
