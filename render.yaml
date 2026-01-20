@@ -5,7 +5,7 @@ services:
     runtime: node
     region: oregon
     plan: free
-    buildCommand: cd backend && npm install && npm run build
+    buildCommand: npm ci && cd backend && npm ci && npm run build
     startCommand: cd backend && npm start
     envVars:
       - key: NODE_ENV
@@ -24,7 +24,7 @@ services:
     runtime: static
     region: oregon
     plan: free
-    buildCommand: cd frontend && npm install && npm run build
+    buildCommand: cd frontend && npm ci && npm run build
     staticPublishPath: ./frontend/dist
     envVars:
       - key: NODE_ENV
