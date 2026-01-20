@@ -2,6 +2,8 @@
 
 Get your AI-powered resume website running in 5 minutes. No technical knowledge required - just follow these steps.
 
+**Note:** The app comes with a sample resume (Sarah Chen, Senior Product Manager) so you can see it working immediately. You'll replace this with your own information in Step 4.
+
 ## What You'll Need
 
 - A computer (Mac, Windows, or Linux)
@@ -78,7 +80,7 @@ Change the basic info to yours:
 
 ### File 2: `data/resume.json`
 
-This file contains your actual resume. Replace Sarah Chen's information with yours:
+**This file contains a sample resume** (Sarah Chen's) to show you the structure. Replace her information with yours:
 
 - `personalInfo` - Your name and contact details
 - `summary` - A brief paragraph about your experience

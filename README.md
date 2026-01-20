@@ -6,6 +6,8 @@
 
 ResumeAI is a complete template for creating your own AI-powered resume website. Visitors can interact with an AI chatbot that answers questions about your professional experience, get job fit assessments, and explore your background through an elegant, responsive interface.
 
+**The app comes preconfigured with a sample resume** (Sarah Chen, Senior Product Manager) that you can view immediately after installation. Simply replace it with your own information to make it yours.
+
 ## Features
 
 - ✅ **AI chatbot** - Answer questions about your experience
