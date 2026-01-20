@@ -2,14 +2,9 @@
 
 > Transform your professional experience into an AI-powered resume website
 
-## Project Status
-
-✅ **Configuration System Ready** - Core configuration files, themes, and setup tools are complete.
-🚧 **Frontend/Backend In Progress** - Application code is being developed.
-
 ## Overview
 
-This project provides a complete template for creating your own AI-powered resume website. Visitors can interact with an AI chatbot that answers questions about your professional experience, get job fit assessments, and explore your background through an elegant, responsive interface.
+ResumeAI is a complete template for creating your own AI-powered resume website. Visitors can interact with an AI chatbot that answers questions about your professional experience, get job fit assessments, and explore your background through an elegant, responsive interface.
 
 ## Features
 
@@ -20,102 +15,89 @@ This project provides a complete template for creating your own AI-powered resum
 - ✅ **Platform-agnostic** - Deploy to Render, Vercel, Netlify, Railway, AWS, or self-host
 - ✅ **Fully responsive** design
 - ✅ **SEO optimized** with Open Graph tags
-- ✅ **Bilingual support** (optional)
+- ✅ **Multilingual support** - Add multiple languages easily
 - ✅ **Easy configuration** - JSON-based, no code changes needed
-- ✅ **Interactive setup wizard** - CLI-based with validation
 - ✅ **Free tier ready** - Works with free tiers of multiple platforms
 
 ## Quick Start
 
 ### Prerequisites
 - Node.js 18+ installed
-- API key for your chosen AI provider (see [AI Providers Guide](docs/AI-PROVIDERS.md)):
+- API key for your chosen AI provider:
   - **Groq** (recommended) - Free, fast ([console.groq.com](https://console.groq.com))
   - **OpenAI** - High quality, $5 free credit ([platform.openai.com](https://platform.openai.com))
   - **Google Gemini** - Free tier available ([makersuite.google.com](https://makersuite.google.com))
   - **Anthropic Claude** - Premium quality ([console.anthropic.com](https://console.anthropic.com))
   - **Self-hosted** - Run locally with Ollama
 
-### Setup Steps
+### Get Started in 5 Minutes
 
-1. **Clone or download this template**
+1. **Clone the repository**
 ```bash
 git clone https://github.com/Radical-commits/resumeai.git
 cd resumeai
 ```
 
-2. **Run the setup wizard**
-```bash
-node scripts/setup-cli.js
-```
-
-The wizard will ask you for:
-- Personal information (name, email, phone, location)
-- Social links (LinkedIn, GitHub)
-- Theme preference (Professional, Modern, Minimal, or Creative)
-- **AI provider choice** (Groq, OpenAI, Google, Anthropic, or Other)
-- Feature preferences (AI chat, job fit assessment)
-- API key (for your chosen AI provider)
-
-3. **Customize your resume**
-
-Edit `data/resume.json` with your:
-- Work experience
-- Skills and expertise
-- Education
-- Projects and achievements
-
-See `examples/` for inspiration.
-
-4. **Install dependencies and start**
+2. **Install dependencies**
 ```bash
 npm install
-npm run dev
+cd frontend && npm install
+cd ../backend && npm install
+cd ..
+```
+
+3. **Configure your site**
+
+Edit `config.json` with your information and `data/resume.json` with your resume.
+
+4. **Set up environment variables**
+
+Create `backend/.env`:
+```bash
+AI_API_KEY=your_api_key_here
+PORT=3001
+```
+
+Create `frontend/.env`:
+```bash
+VITE_API_URL=http://localhost:3001
+```
+
+5. **Start the development servers**
+```bash
+# Terminal 1 - Backend
+cd backend && npm run dev
+
+# Terminal 2 - Frontend
+cd frontend && npm run dev
 ```
 
 Visit http://localhost:5173 to see your resume!
 
-### Manual Setup
+## Documentation
 
-If you prefer manual configuration:
-
-1. Copy template files:
-```bash
-cp config.json.example config.json
-cp data/resume.json.example data/resume.json
-```
-
-2. Edit files with your information
-3. Create `.env` files in `frontend/` and `backend/`
-4. Run validation: `node scripts/validate.js`
+### Getting Started
+1. **[Quick Start Guide](QUICKSTART.md)** ⭐ - Detailed 5-minute setup (start here!)
+2. **[Customization Guide](docs/CUSTOMIZATION.md)** - Make it yours (colors, theme, content)
+3. **[Advanced Guide](docs/ADVANCED.md)** - Complete reference (config, AI providers, deployment, languages)
 
 ## Project Structure
 
 ```
 resumeai/
-├── plans/                  # Implementation plans and documentation
 ├── docs/                   # User guides and documentation
-├── examples/               # Example configurations
+├── data/                   # Resume data and translations
 ├── themes/                 # Pre-built theme configurations
-├── scripts/                # Setup wizards and utilities
 ├── frontend/               # React + Vite application
 ├── backend/                # Express + AI service
+├── config.json             # Site configuration
 └── README.md
 ```
 
-## Documentation
+## Configuration
 
-### Getting Started
-1. **[Quick Start](QUICKSTART.md)** ⭐ - Get running in 5 minutes (start here!)
-2. **[Customization Guide](docs/CUSTOMIZATION.md)** - Make it yours (colors, theme, content)
-3. **[Advanced Guide](docs/ADVANCED.md)** - Complete reference (config, AI, deployment, languages)
+### Site Settings (`config.json`)
 
-## Configuration Files
-
-The template uses simple JSON configuration files:
-
-### `config.json` - Site Settings
-Controls your site's metadata, branding, and features:
 ```json
 {
   "site": {
@@ -137,7 +119,8 @@ Controls your site's metadata, branding, and features:
 }
 ```
 
-### `data/resume.json` - Your Resume
+### Resume Data (`data/resume.json`)
+
 Contains your professional information:
 - Personal info and contact details
 - Professional summary and highlights
@@ -146,20 +129,9 @@ Contains your professional information:
 - Education and certifications
 - Projects, awards, and publications
 
-See `examples/software-engineer.json` for a complete example.
-
-### `data/translations.json` - UI Text (Optional)
-Customize UI labels and messages, with support for multiple languages.
-
-### `.env` Files - API Keys
-- `backend/.env` - AI provider API key (`AI_API_KEY`) and server configuration
-- `frontend/.env` - API URL and frontend settings
-
-**Note:** Use the generic `AI_API_KEY` variable for all providers. Provider-specific keys (e.g., `GROQ_API_KEY`, `OPENAI_API_KEY`) are also supported for backward compatibility.
-
 ## Themes
 
-Choose from 4 pre-built themes:
+Choose from 4 pre-built themes or create your own:
 
 | Theme | Colors | Best For |
 |-------|--------|----------|
@@ -168,25 +140,16 @@ Choose from 4 pre-built themes:
 | **Minimal** | Black & White | Designers, writers, minimalists |
 | **Creative** | Pink & Purple | Creative professionals, artists |
 
-Change your theme by editing `config.json`:
+Change your theme in `config.json`:
 ```json
 {
   "theme": "professional"
 }
 ```
 
-Each theme includes customized:
-- Color palette
-- Typography
-- Spacing and layout
-- Border radius
-- Animation speeds
-
-See `themes/` directory for theme configurations. You can also create custom themes!
-
 ## AI Providers
 
-The template supports multiple AI providers. Choose based on your needs:
+Choose the AI provider that fits your needs:
 
 | Provider | Free Tier | Cost | Speed | Best For |
 |----------|-----------|------|-------|----------|
@@ -198,9 +161,9 @@ The template supports multiple AI providers. Choose based on your needs:
 
 ⭐ **Recommended:** Start with **Groq** (free, fast, good quality)
 
-See [AI Providers Guide](docs/AI-PROVIDERS.md) for detailed comparison and setup instructions.
+See the [Advanced Guide](docs/ADVANCED.md#ai-provider-setup) for detailed setup instructions.
 
-## Deployment Options
+## Deployment
 
 Deploy to your preferred platform:
 
@@ -210,69 +173,34 @@ Deploy to your preferred platform:
 | **Vercel** | Yes | Easy | Frontend + serverless |
 | **Netlify** | Yes | Easy | Static sites + functions |
 | **Railway** | Limited | Medium | Containers |
-| **AWS** | Complex | Hard | Enterprise, scale |
-| **Self-hosted** | N/A | Hard | Full control |
+| **Self-hosted** | N/A | Medium | Full control |
 
-⭐ **Recommended:** Start with **Render.com** (reference implementation)
+⭐ **Recommended:** Start with **Render.com**
 
-See [Deployment Guide](docs/DEPLOYMENT-GUIDE.md) for platform-specific instructions.
+See the [Advanced Guide](docs/ADVANCED.md#deployment-options) for platform-specific instructions.
 
-## Development Roadmap
+## Tech Stack
 
-### Phase 1: Foundation ✅
-- ✅ Create project structure
-- ✅ Implement configuration system (config.json, data/resume.json)
-- ✅ Add theme system (4 pre-built themes)
-- ✅ Build CLI setup wizard
-- ✅ Create validation script
-- ✅ Add example configurations
-- [ ] Copy and refactor frontend/backend code
-- [ ] Test with placeholder data
-
-### Phase 2: Application Code (In Progress)
-- [ ] Set up frontend (React + Vite + TypeScript)
-- [ ] Set up backend (Express + TypeScript)
-- [ ] Implement configuration loaders
-- [ ] Connect AI service (Groq API)
-- [ ] Build UI components
-- [ ] Test all features
-
-### Phase 3: Documentation (Week 3)
-- [ ] Write all documentation
-- [ ] Create examples
-- [ ] Add inline code comments
-- [ ] Write blog post
-- [ ] Record video tutorial
-
-### Phase 4: Polish & Launch (Week 4)
-- [ ] Deploy demo site
-- [ ] Final testing
-- [ ] Prepare launch materials
-- [ ] Publish to GitHub
-- [ ] Announce launch
-
-## Reference Implementation
-
-This template is based on a working personal resume site with the following tech stack:
-- Frontend: React 18 + TypeScript + Vite
-- Backend: Express.js + TypeScript
-- AI: Groq API (Llama 3.3 70B)
-- Deployment: Render.com
-- i18n: i18next for bilingual support
+- **Frontend:** React 18 + TypeScript + Vite
+- **Backend:** Express.js + TypeScript
+- **AI:** Multiple providers supported (Groq, OpenAI, Gemini, Anthropic, Ollama)
+- **i18n:** i18next for multilingual support
+- **Styling:** CSS with custom themes
 
 ## Contributing
 
-This project is in active development. Contributions will be welcome once the initial template is complete.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-MIT License (to be added)
+MIT License - see LICENSE file for details
 
-## Credits
+## Support
 
-Created by extracting and generalizing patterns from a personal AI resume website project.
+- **Issues:** [GitHub Issues](https://github.com/Radical-commits/resumeai/issues)
+- **Documentation:** See the [docs](docs/) directory
+- **Questions:** Open a discussion on GitHub
 
 ---
 
-**Status**: Currently in Phase 1 - Foundation setup
-**Last Updated**: 2026-01-19
+**Built with ❤️ for professionals who want to showcase their experience with AI**
