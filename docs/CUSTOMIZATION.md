@@ -1,23 +1,19 @@
 # Customization Guide
 
-Learn how to customize every aspect of your AI resume website.
+Make the website yours! This guide covers the most common customizations.
 
-## Table of Contents
+## Quick Links
 
-1. [Branding and Colors](#branding-and-colors)
-2. [Typography](#typography)
-3. [Layout and Spacing](#layout-and-spacing)
-4. [Custom Themes](#custom-themes)
-5. [UI Text and Labels](#ui-text-and-labels)
-6. [Assets (Images, Icons)](#assets)
-7. [Advanced Customization](#advanced-customization)
+- Just getting started? → See [QUICKSTART.md](../QUICKSTART.md)
+- Need all config options? → See [ADVANCED.md](./ADVANCED.md)
 
-## Branding and Colors
+## Common Customizations
 
-### Using Pre-built Themes
+### 1. Change Colors and Theme
 
-The easiest way to customize colors is by selecting a theme in `config.json`:
+**Pick a pre-made theme** (easiest):
 
+Edit `config.json`:
 ```json
 {
   "theme": "professional"
@@ -25,283 +21,183 @@ The easiest way to customize colors is by selecting a theme in `config.json`:
 ```
 
 Available themes:
-- `professional` - Teal and dark (#14b8a6)
-- `modern` - Blue and slate (#3b82f6)
-- `minimal` - Black and white (#000000)
-- `creative` - Pink and purple (#ec4899)
+- `professional` - Teal on dark (default)
+- `modern` - Blue on slate
+- `minimal` - Black and white
+- `creative` - Pink on purple
 
-### Override Theme Colors
+**Override specific colors:**
 
-You can override specific colors without creating a custom theme:
+Stay with a theme but change the main color:
 
 ```json
 {
   "theme": "professional",
   "branding": {
-    "primaryColor": "#your-hex-color",
-    "accentColor": "#your-accent-color"
+    "primaryColor": "#ff6b6b"  ← Your custom color
   }
 }
 ```
 
-### Complete Branding Override
-
-Override all colors:
+**Choose your own colors:**
 
 ```json
 {
   "branding": {
-    "primaryColor": "#14b8a6",
-    "accentColor": "#0d9488",
+    "primaryColor": "#your-color",
+    "accentColor": "#your-accent",
     "backgroundColor": "#0a0a0a",
-    "textColor": "#ffffff",
-    "fontFamily": "Inter, system-ui, sans-serif"
+    "textColor": "#ffffff"
   }
 }
 ```
 
-### Color Guidelines
+**Color picker tools:**
+- https://coolors.co - Generate palettes
+- https://colorhunt.co - Browse color schemes
+- https://webaim.org/resources/contrastchecker/ - Check readability
 
-- **Primary Color**: Main brand color, used for buttons, links, highlights
-- **Accent Color**: Secondary color for hover states
-- **Background**: Main page background
-- **Text Color**: Primary text color
-- Ensure good contrast (WCAG AA: 4.5:1 ratio minimum)
-- Test on both light and dark backgrounds
+### 2. Add Your Photo
 
-### Color Tools
+1. Get a professional headshot (square, 500x500px minimum)
+2. Save as `profile.jpg`
+3. Place in `frontend/public/profile.jpg`
+4. (Optional) Update Hero component to display it
 
-- [Coolors.co](https://coolors.co) - Generate color palettes
-- [Contrast Checker](https://webaim.org/resources/contrastchecker/) - Verify accessibility
-- [Color Hunt](https://colorhunt.co) - Explore color schemes
+**Photo tips:**
+- Use square format
+- Professional background
+- Good lighting
+- Genuine smile
+- 500-1000px size
 
-## Typography
+### 3. Update Your Resume
 
-### Changing Fonts
+Edit `data/resume.json`:
 
-Update the `fontFamily` in your config:
-
+**Personal info:**
 ```json
 {
-  "branding": {
-    "fontFamily": "Roboto, sans-serif"
+  "personalInfo": {
+    "name": "Your Name",
+    "title": "Your Title",
+    "email": "you@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "City, State",
+    "linkedin": "https://linkedin.com/in/you",
+    "github": "https://github.com/you"
   }
 }
 ```
 
-### Using Custom Fonts
+**Summary (2-3 sentences about you):**
+```json
+{
+  "summary": "Results-driven professional with X years of experience..."
+}
+```
 
-1. **Google Fonts** (Recommended):
+**Highlights (3-5 top achievements):**
+```json
+{
+  "highlights": [
+    "Increased revenue by 200%",
+    "Led team of 15 engineers",
+    "Launched 3 products in 2 years"
+  ]
+}
+```
 
-Add to `frontend/index.html`:
+**Work experience:**
+```json
+{
+  "experience": [
+    {
+      "title": "Senior Product Manager",
+      "company": "Company Name",
+      "location": "City, State",
+      "startDate": "Jan 2020",
+      "endDate": "Present",
+      "current": true,
+      "achievements": [
+        "Built feature that increased engagement 40%",
+        "Managed roadmap for 3 product lines"
+      ]
+    }
+  ]
+}
+```
+
+**Skills:**
+```json
+{
+  "skills": {
+    "technical": ["Python", "React", "SQL"],
+    "productManagement": ["Roadmapping", "User Research"],
+    "tools": ["Jira", "Figma", "Mixpanel"]
+  }
+}
+```
+
+You can create your own categories! Just follow the same structure.
+
+**Education:**
+```json
+{
+  "education": [
+    {
+      "degree": "MBA",
+      "institution": "Stanford University",
+      "location": "Stanford, CA"
+    }
+  ]
+}
+```
+
+### 4. Change Fonts
+
+**Use Google Fonts** (easiest):
+
+1. Go to https://fonts.google.com
+2. Pick a font (e.g., "Poppins")
+3. Add to `frontend/index.html`:
 ```html
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 ```
 
-Update config:
+4. Update `config.json`:
 ```json
 {
   "branding": {
-    "fontFamily": "Roboto, sans-serif"
+    "fontFamily": "Poppins, sans-serif"
   }
 }
 ```
 
-2. **Self-hosted Fonts**:
+**Font pairing ideas:**
+- **Modern:** Montserrat + Inter
+- **Professional:** Playfair Display + Inter
+- **Clean:** Helvetica Neue + System UI
+- **Creative:** Poppins + Inter
 
-Place font files in `frontend/public/fonts/` and add CSS in your theme.
+### 5. Add Social Media Image
 
-### Font Pairing
+When you share your site on social media, this image appears:
 
-Good combinations:
-- **Professional**: Playfair Display (headings) + Inter (body)
-- **Modern**: Montserrat + Inter
-- **Minimal**: Helvetica Neue + System UI
-- **Creative**: Poppins + Inter
-
-## Layout and Spacing
-
-### Container Width
-
-Themes include a `containerMaxWidth` setting. To customize:
-
-Edit `themes/yourtheme.json`:
-```json
-{
-  "spacing": {
-    "containerMaxWidth": "1200px",
-    "sectionPadding": "4rem",
-    "cardPadding": "2rem"
-  }
-}
-```
-
-Common widths:
-- Narrow: 900-1000px (blogs, text-heavy)
-- Standard: 1200px (balanced)
-- Wide: 1400-1600px (portfolio, visual)
-
-### Section Spacing
-
-Adjust padding between sections:
-
-```json
-{
-  "spacing": {
-    "sectionPadding": "5rem"  // More space
-  }
-}
-```
-
-### Border Radius
-
-Control corner roundness:
-
-```json
-{
-  "borderRadius": {
-    "small": "0.25rem",   // Buttons, tags
-    "medium": "0.5rem",   // Cards, inputs
-    "large": "1rem"       // Modals, hero sections
-  }
-}
-```
-
-## Custom Themes
-
-### Creating a New Theme
-
-1. **Copy an existing theme**:
-```bash
-cp themes/professional.json themes/mytheme.json
-```
-
-2. **Edit the theme file**:
-```json
-{
-  "name": "My Custom Theme",
-  "description": "Your theme description",
-  "colors": {
-    "primary": "#your-color",
-    "accent": "#your-accent",
-    "background": "#your-bg",
-    "text": "#your-text"
-  },
-  "fonts": {
-    "heading": "Your Heading Font",
-    "body": "Your Body Font"
-  }
-}
-```
-
-3. **Activate your theme**:
-```json
-{
-  "theme": "mytheme"
-}
-```
-
-### Theme Structure
-
-```json
-{
-  "name": "Theme Name",
-  "description": "Brief description",
-  "colors": {
-    "primary": "#hex",
-    "primaryHover": "#hex",
-    "accent": "#hex",
-    "background": "#hex",
-    "backgroundSecondary": "#hex",
-    "text": "#hex",
-    "textSecondary": "#hex",
-    "border": "#hex",
-    "success": "#hex",
-    "warning": "#hex",
-    "error": "#hex"
-  },
-  "fonts": {
-    "heading": "Font Family, fallback",
-    "body": "Font Family, fallback",
-    "mono": "Monospace Font, fallback"
-  },
-  "spacing": {
-    "containerMaxWidth": "1200px",
-    "sectionPadding": "4rem",
-    "cardPadding": "2rem"
-  },
-  "borderRadius": {
-    "small": "0.375rem",
-    "medium": "0.5rem",
-    "large": "1rem"
-  },
-  "animations": {
-    "transitionSpeed": "0.3s",
-    "hoverScale": "1.02"
-  }
-}
-```
-
-## UI Text and Labels
-
-### Changing UI Text
-
-Edit `data/translations.json` to customize all UI text:
-
-```json
-{
-  "en": {
-    "hero": {
-      "statusBadge": "Open to Opportunities",
-      "greeting": "Hello, I'm"
-    },
-    "nav": {
-      "about": "About Me",
-      "experience": "Work"
-    }
-  }
-}
-```
-
-### Adding Custom Sections
-
-You can add custom section titles:
-
-```json
-{
-  "sections": {
-    "volunteering": {
-      "title": "Community Work",
-      "subtitle": "Giving back"
-    }
-  }
-}
-```
-
-## Assets
-
-### Favicon
-
-Replace `frontend/public/favicon.ico` with your own icon.
-
-Create favicons:
-- [Favicon.io](https://favicon.io)
-- [RealFaviconGenerator](https://realfavicongenerator.net)
-
-### Open Graph Image
-
-The OG image appears when sharing on social media (1200x630px).
-
-1. Create image with:
-   - Your name and title
-   - Professional photo (optional)
+1. Create an image (1200x630px):
+   - Your name
+   - Your title
+   - Your photo (optional)
    - Brand colors
-   - Clean, readable design
 
-2. Save as `frontend/public/og-image.png`
+2. Tools to create it:
+   - https://canva.com (templates available)
+   - https://figma.com
+   - https://og-playground.vercel.app
 
-3. Update config:
+3. Save as `frontend/public/og-image.png`
+
+4. Update `config.json`:
 ```json
 {
   "site": {
@@ -310,111 +206,157 @@ The OG image appears when sharing on social media (1200x630px).
 }
 ```
 
-Tools:
-- [Canva](https://canva.com) - Templates available
-- [Figma](https://figma.com) - Design from scratch
-- [OG Image Generator](https://og-playground.vercel.app)
+### 6. Change Site Title & Description
 
-### Profile Photo
-
-Add to `frontend/public/profile.jpg` and reference in your code.
-
-## Advanced Customization
-
-### Component Styling
-
-For deeper customization, edit component styles in:
-- `frontend/src/components/*.tsx` (React components)
-- `frontend/src/styles/*.css` (Global styles)
-
-### Animation Speed
-
-Control transition speeds in your theme:
+What appears in Google and browser tabs:
 
 ```json
 {
-  "animations": {
-    "transitionSpeed": "0.2s",  // Faster
-    "hoverScale": "1.05"        // More dramatic
+  "site": {
+    "name": "Your Name",
+    "title": "Your Professional Title",
+    "description": "A brief description that appears in search results"
   }
 }
 ```
 
-### Responsive Breakpoints
+**SEO tips:**
+- Description: 120-160 characters
+- Include keywords for your role/industry
+- Make it specific to you
 
-Modify breakpoints in `frontend/src/styles/breakpoints.ts`:
+### 7. Add Multiple Languages
 
-```typescript
-export const breakpoints = {
-  mobile: '640px',
-  tablet: '768px',
-  desktop: '1024px',
-  wide: '1280px'
-}
-```
+Let visitors view your resume in their language:
 
-### Dark Mode Toggle
+**Simple setup:**
 
-To add a dark/light mode toggle:
-
-1. Create two theme variants (light/dark)
-2. Add toggle component in header
-3. Store preference in localStorage
-4. Load theme based on preference
-
-### Custom Sections
-
-To add new resume sections:
-
-1. Add data to `data/resume.json`:
+1. Enable in `config.json`:
 ```json
 {
-  "volunteering": [
-    {
-      "organization": "Nonprofit Name",
-      "role": "Volunteer Role",
-      "description": "What you did"
-    }
-  ]
+  "features": {
+    "enableMultilingual": true
+  },
+  "languages": {
+    "default": "en",
+    "supported": ["en", "de"]
+  }
 }
 ```
 
-2. Create component in `frontend/src/components/Volunteering.tsx`
-3. Import and add to main layout
+2. Copy `data/resume.json` to `data/resume.de.json`
 
-## Tips for Good Design
+3. Translate the content (keep the structure)
 
-1. **Consistency**: Use your color palette consistently
-2. **Hierarchy**: Make important information larger/bolder
-3. **Whitespace**: Don't crowd the page
-4. **Contrast**: Ensure text is readable
-5. **Mobile-first**: Test on phones and tablets
-6. **Performance**: Optimize images and fonts
-7. **Accessibility**: Support keyboard navigation
+4. Language switcher appears automatically!
 
-## Testing Your Customization
+**Supported languages:**
+en (English), ru (Russian), es (Spanish), fr (French), de (German), pt (Portuguese), zh (Chinese), ja (Japanese), ko (Korean)
 
-Checklist:
-- [ ] Test on Chrome, Firefox, Safari
-- [ ] View on mobile device
-- [ ] Check color contrast (WCAG AA)
-- [ ] Verify all text is readable
-- [ ] Test dark mode (if applicable)
-- [ ] Check social media preview
-- [ ] Validate HTML/CSS
-- [ ] Test with screen reader
+See [ADVANCED.md - Multiple Languages](./ADVANCED.md#multiple-languages) for details.
 
-## Getting Feedback
+### 8. Turn Features On/Off
 
-Before deploying:
-1. Show to friends/colleagues
-2. Post in design communities
-3. Use [Feedback Fish](https://feedback.fish) for user feedback
-4. A/B test different versions
+```json
+{
+  "features": {
+    "enableChat": true,        ← AI chat button
+    "enableJobFit": true,      ← Job fit assessment
+    "enableMultilingual": false ← Language switcher
+  }
+}
+```
 
-## Resources
+**Note:** Chat and job fit require backend with AI provider configured.
 
-- [Refactoring UI](https://refactoringui.com) - Design tips
-- [Web Design in 4 Minutes](https://jgthms.com/web-design-in-4-minutes/)
-- [Material Design](https://material.io/design) - Design system reference
-- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+### 9. Change AI Provider
+
+Switch from Groq to another provider:
+
+**OpenAI:**
+```json
+{
+  "ai": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "maxTokens": 1024
+  }
+}
+```
+
+Update `backend/.env`:
+```bash
+AI_API_KEY=sk-your-openai-key
+```
+
+**Other providers:** See [ADVANCED.md - AI Provider Setup](./ADVANCED.md#ai-provider-setup)
+
+### 10. Adjust Layout Spacing
+
+Make sections more compact or spacious:
+
+Create/edit your theme file in `themes/`:
+
+```json
+{
+  "spacing": {
+    "containerMaxWidth": "1200px",  ← Page width
+    "sectionPadding": "4rem",       ← Space between sections
+    "cardPadding": "2rem"           ← Space inside cards
+  }
+}
+```
+
+Common widths:
+- Narrow (text-heavy): 900px
+- Standard (balanced): 1200px
+- Wide (visual/portfolio): 1400px
+
+## Before You Deploy
+
+### Checklist
+
+- [ ] Updated `data/resume.json` with your information
+- [ ] Changed site name and title in `config.json`
+- [ ] Added your photo to `frontend/public/`
+- [ ] Created social media image (`og-image.png`)
+- [ ] Picked colors/theme you like
+- [ ] Tested AI chat works
+- [ ] Checked on mobile device
+- [ ] Spell-checked all content
+- [ ] Verified all links work
+
+### Test Your Site
+
+1. **Desktop browsers:** Chrome, Firefox, Safari
+2. **Mobile:** View on your phone
+3. **AI chat:** Ask it questions about your resume
+4. **Links:** Click all social media links
+5. **Responsive:** Resize browser window
+
+## Getting Help
+
+- **How do I...?** Check [ADVANCED.md](./ADVANCED.md)
+- **Something's broken:** See [Troubleshooting](./ADVANCED.md#troubleshooting)
+- **Just starting:** See [QUICKSTART.md](../QUICKSTART.md)
+
+## Design Tips
+
+1. **Keep it simple** - Less is more
+2. **Use whitespace** - Don't crowd the page
+3. **Limit colors** - 2-3 colors max
+4. **Be consistent** - Same style throughout
+5. **Make it yours** - Add personal touches
+6. **Test on mobile** - Most visitors are on phones
+7. **Ask for feedback** - Show to friends first
+
+## Examples
+
+Look at these for inspiration:
+- `examples/software-engineer.json` - Technical resume
+- `examples/product-manager.json` - Business resume
+
+## What's Next?
+
+Ready to put it online? See [ADVANCED.md - Deployment](./ADVANCED.md#deployment-options) for hosting options.

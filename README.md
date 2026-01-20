@@ -105,19 +105,10 @@ ai-resume-template/
 
 ## Documentation
 
-### User Guides
-- **[Setup Guide](docs/SETUP-GUIDE.md)** - Complete setup instructions
-- **[Configuration Reference](docs/CONFIG-REFERENCE.md)** - All config.json options explained
-- **[Customization Guide](docs/CUSTOMIZATION.md)** - How to customize everything
-- **[Multilingual Setup](docs/MULTILINGUAL-SETUP.md)** - Add multiple languages
-- **[AI Providers Guide](docs/AI-PROVIDERS.md)** - Compare and configure AI providers
-- **[Deployment Guide](docs/DEPLOYMENT-GUIDE.md)** - Deploy to various platforms
-- **[Theme Guide](themes/README.md)** - Working with themes
-
-### Planning & Development
-- [Productization Plan](plans/PRODUCTIZATION-PLAN.md) - Complete implementation plan
-- [Implementation Summary](IMPLEMENTATION-SUMMARY.md) - What was implemented
-- [Project Structure](PROJECT-STRUCTURE.md) - Project organization
+### Getting Started
+1. **[Quick Start](QUICKSTART.md)** ⭐ - Get running in 5 minutes (start here!)
+2. **[Customization Guide](docs/CUSTOMIZATION.md)** - Make it yours (colors, theme, content)
+3. **[Advanced Guide](docs/ADVANCED.md)** - Complete reference (config, AI, deployment, languages)
 
 ## Configuration Files
 
