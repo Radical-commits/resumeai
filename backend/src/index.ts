@@ -19,7 +19,7 @@ dotenv.config()
 
 const app = express()
 const PORT = process.env.PORT || 3001
-const CORS_ORIGIN = process.env.CORS_ORIGIN || 'http://localhost:5173'
+const CORS_ORIGIN = process.env.CORS_ORIGIN || process.env.FRONTEND_URL || 'http://localhost:5173'
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
 // Parse CORS origins - support multiple comma-separated origins
@@ -34,15 +34,40 @@ app.use(helmet({
 // Compression middleware - gzip responses
 app.use(compression())
 
-// CORS middleware - allow frontend to make requests from multiple origins
-app.use(cors({
+// Request logging - use 'combined' format in production, 'dev' in development
+app.use(morgan(NODE_ENV === 'production' ? 'combined' : 'dev'))
+
+// Serve static files BEFORE CORS and other middleware (in production)
+if (NODE_ENV === 'production') {
+  const frontendPath = path.join(__dirname, 'public')
+  console.log('Serving frontend from:', frontendPath)
+
+  // Serve static assets with caching
+  app.use(express.static(frontendPath, {
+    maxAge: '1d',
+    etag: true,
+    index: false // Don't automatically serve index.html for directories
+  }))
+}
+
+// CORS middleware - only for API routes
+// In production with single-service deployment, be more permissive
+app.use('/api', cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (mobile apps, curl, etc.)
     if (!origin) return callback(null, true)
 
+    // In production single-service mode, allow same-origin requests
+    if (NODE_ENV === 'production' && !process.env.FRONTEND_URL) {
+      // Frontend and backend are served from same domain
+      return callback(null, true)
+    }
+
+    // Check against allowed origins
     if (allowedOrigins.includes(origin)) {
       callback(null, true)
     } else {
+      console.warn(`CORS rejected origin: ${origin}`)
       callback(new Error('Not allowed by CORS'))
     }
   },
@@ -52,7 +77,7 @@ app.use(cors({
 // Body parsing middleware
 app.use(express.json())
 
-// Rate limiting - prevent abuse
+// Rate limiting - prevent abuse (only on API routes)
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: NODE_ENV === 'production' ? 100 : 1000, // limit each IP to 100 requests per windowMs in production
@@ -61,9 +86,6 @@ const limiter = rateLimit({
   legacyHeaders: false,
 })
 app.use('/api/', limiter)
-
-// Request logging - use 'combined' format in production, 'dev' in development
-app.use(morgan(NODE_ENV === 'production' ? 'combined' : 'dev'))
 
 
 // Routes
@@ -88,27 +110,20 @@ if (NODE_ENV !== 'production') {
   })
 }
 
-// Serve static files from frontend build in production
+// Serve index.html for all non-API routes (SPA routing) - MUST be after static files
 if (NODE_ENV === 'production') {
   const frontendPath = path.join(__dirname, 'public')
-  console.log('Serving frontend from:', frontendPath)
 
-  // Serve static assets with caching
-  app.use(express.static(frontendPath, {
-    maxAge: '1d',
-    etag: true,
-    index: false // Don't automatically serve index.html for directories
-  }))
-
-  // Serve index.html for all non-API routes (SPA routing)
   app.get('*', (req, res) => {
-    // Don't serve index.html for API routes
+    // Don't serve index.html for API routes or health check
     if (req.path.startsWith('/api') || req.path === '/health') {
       return res.status(404).json({
         error: 'Not found',
         path: req.path
       })
     }
+
+    // Send index.html for all other routes (SPA routing)
     res.sendFile(path.join(frontendPath, 'index.html'), (err) => {
       if (err) {
         console.error('Error sending index.html:', err)

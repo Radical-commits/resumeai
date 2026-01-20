@@ -15,7 +15,7 @@
     "linkedin": "https://linkedin.com/in/sarahchen",
     "github": "https://github.com/schen"
   },
-  "theme": "modern",
+  "theme": "creative",
   "features": {
     "enableChat": true,
     "enableJobFit": true,
@@ -30,7 +30,7 @@
   },
   "languages": {
     "default": "en",
-    "supported": ["en","zh"]
+    "supported": ["en","de"]
   },
   "ai": {
     "provider": "groq",
