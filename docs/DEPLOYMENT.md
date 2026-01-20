@@ -39,8 +39,9 @@ Name: resumeai (or your preferred name)
 Region: Oregon (or closest to you)
 Branch: main
 Runtime: Node
+Root Directory: backend
 
-Build Command: npm run build:prod
+Build Command: npm install --loglevel=error && npm run build && cd ../frontend && npm install --loglevel=error && npm run build
 Start Command: npm start
 ```
 
