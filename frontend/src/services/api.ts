@@ -6,7 +6,10 @@ import type {
   JobFitAssessmentResponse,
 } from '../types/chat'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+// In production, use relative URLs (same domain as frontend)
+// In development, default to localhost:3001
+const API_URL = import.meta.env.VITE_API_URL ||
+  (import.meta.env.MODE === 'production' ? '' : 'http://localhost:3001')
 
 const apiClient = axios.create({
   baseURL: API_URL,
